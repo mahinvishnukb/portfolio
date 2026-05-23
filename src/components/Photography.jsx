@@ -5,52 +5,52 @@ const photos = [
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-1.jpg",
+    image: "/images/photography/wildlife/wildlife-1.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-2.jpg",
+    image: "/images/photography/wildlife/wildlife-2.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-3.jpg",
+    image: "/images/photography/wildlife/wildlife-3.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-4.jpg",
+    image: "/images/photography/wildlife/wildlife-4.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-5.jpg",
+    image: "/images/photography/wildlife/wildlife-5.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-6.jpg",
+    image: "/images/photography/wildlife/wildlife-6.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-7.jpg",
+    image: "/images/photography/wildlife/wildlife-7.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-8.jpg",
+    image: "/images/photography/wildlife/wildlife-8.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-9.jpg",
+    image: "/images/photography/wildlife/wildlife-9.jpg",
   },
   {
     title: "Wildlife Frame",
     type: "Wildlife",
-    image: "/images/photography/Wildlife/wildlife-10.jpg",
+    image: "/images/photography/wildlife/wildlife-10.jpg",
   },
   {
     title: "Portrait Moment",
