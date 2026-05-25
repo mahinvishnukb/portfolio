@@ -41,25 +41,25 @@ function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-zinc-950 px-6 py-28 text-white md:px-12"
+      className="relative overflow-hidden bg-zinc-950 px-6 py-20 text-white md:px-12 md:py-28"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.12),transparent_35%)]" />
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="mb-14 max-w-3xl">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-red-400">
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
+        <div className="mb-10 max-w-3xl md:mb-14">
+          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-red-400 sm:text-sm sm:tracking-[0.3em]">
             Projects
           </p>
 
-          <h2 className="text-4xl font-black md:text-6xl">
+          <h2 className="text-4xl font-black leading-tight md:text-6xl">
             Practical Work with <span className="text-red-400">Real Purpose</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-zinc-400">
+          <p className="mt-5 text-base leading-7 text-zinc-400 sm:mt-6 sm:text-lg sm:leading-8">
             A selection of analytics, machine learning, and creative work that reflects my technical and visual interests.
           </p>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 md:gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -71,25 +71,25 @@ function ProjectsSection() {
                 delay: index * 0.12,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="rounded-3xl border border-zinc-800 bg-black/95 backdrop-blur-sm p-8 will-change-transform transition-shadow duration-500 hover:border-red-400/70 hover:shadow-[0_0_60px_rgba(239,68,68,0.22)]"
+              className="rounded-3xl border border-zinc-800 bg-black/95 p-5 backdrop-blur-sm will-change-transform transition-shadow duration-500 hover:border-red-400/70 hover:shadow-[0_0_60px_rgba(239,68,68,0.22)] sm:p-8"
             >
-              <p className="mb-4 text-xs uppercase tracking-[0.3em] text-red-400">
+              <p className="mb-4 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
                 {project.type}
               </p>
 
-              <h3 className="text-2xl font-black text-white">
+              <h3 className="text-xl font-black leading-tight text-white sm:text-2xl">
                 {project.title}
               </h3>
 
-              <p className="mt-5 leading-7 text-zinc-400">
+              <p className="mt-4 text-sm leading-7 text-zinc-400 sm:mt-5 sm:text-base">
                 {project.description}
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-2 sm:mt-7 sm:gap-3">
                 {project.tech.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-red-400/20 bg-red-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red-300"
+                    className="rounded-full border border-red-400/20 bg-red-400/10 px-3 py-2 text-[10px] font-semibold uppercase tracking-wide text-red-300 sm:px-4 sm:text-xs"
                   >
                     {item}
                   </span>
@@ -105,7 +105,7 @@ function ProjectsSection() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#050816] text-white overflow-x-hidden">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#050816] text-white">
       <Navbar />
       <Hero />
       <About />
