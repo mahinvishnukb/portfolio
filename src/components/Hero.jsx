@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
       {/* Background Image */}
       <img
-        src="/images/hero/hero-main1.png"
+        src="/images/hero/hero-main2.png"
         alt="Mahin Vishnu portfolio hero"
         className="absolute inset-0 h-full w-full object-cover object-[72%_center] opacity-100 brightness-[1.2] contrast-[1.08] saturate-[1.1] scale-[1.02] md:object-right md:brightness-[1.45] md:contrast-[1.15] md:saturate-[1.15]"
       />
@@ -63,25 +63,85 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-14 grid max-w-xl grid-cols-3 gap-4 border-t border-white/15 pt-6 sm:mt-16 sm:gap-6 sm:pt-8">
-            <div>
-              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">5+</h3>
-              <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-white sm:text-xs">
+          <div className="mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/10 pt-7 sm:mt-16 sm:gap-6 sm:pt-8">
+            <div className="flex flex-col items-center border-r border-white/10 pr-4 text-center sm:pr-6">
+              <div className="mb-3 text-yellow-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.7}
+                  stroke="currentColor"
+                  className="h-9 w-9"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25"
+                  />
+                </svg>
+              </div>
+
+              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">
+                5+
+              </h3>
+
+              <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
                 Projects
               </p>
             </div>
 
-            <div className="border-l border-white/15 pl-6">
-              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">3+</h3>
-              <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-white sm:text-xs">
-                Leadership Roles
+            <div className="flex flex-col items-center border-r border-white/10 px-4 text-center sm:px-6">
+              <div className="mb-3 text-yellow-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.7}
+                  stroke="currentColor"
+                  className="h-9 w-9"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 5.25h16.5v13.5H3.75V5.25Zm4.5 3h7.5m-7.5 3h7.5m-7.5 3h4.5"
+                  />
+                </svg>
+              </div>
+
+              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">
+                10+
+              </h3>
+
+              <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
+                Technologies
               </p>
             </div>
 
-            <div className="border-l border-white/15 pl-6">
-              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">24/7</h3>
-              <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-white sm:text-xs">
-                Creative Mindset
+            <div className="flex flex-col items-center pl-4 text-center sm:pl-6">
+              <div className="mb-3 text-yellow-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.7}
+                  stroke="currentColor"
+                  className="h-9 w-9"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m9 12.75 2.25 2.25L15 9.75m6 2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </div>
+
+              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">
+                3+
+              </h3>
+
+              <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
+                Leadership Roles
               </p>
             </div>
           </div>
