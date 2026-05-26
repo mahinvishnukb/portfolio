@@ -7,12 +7,26 @@ const Hero = () => {
       <img
         src="/images/hero/hero-main1.png"
         alt="Mahin Vishnu portfolio hero"
-        className="absolute inset-0 h-full w-full object-cover object-[72%_center] opacity-100 brightness-[1.2] contrast-[1.08] saturate-[1.1] scale-[1.02] md:object-right md:brightness-[1.45] md:contrast-[1.15] md:saturate-[1.15]"
+        onError={(e) => {
+          const fallbackImages = [
+            "/images/hero/hero-main.png",
+            "/images/hero/hero-main1.jpg",
+            "/images/hero/hero-main1.jpeg",
+          ];
+
+          const currentIndex = Number(e.currentTarget.dataset.fallbackIndex || 0);
+
+          if (currentIndex < fallbackImages.length) {
+            e.currentTarget.dataset.fallbackIndex = currentIndex + 1;
+            e.currentTarget.src = fallbackImages[currentIndex];
+          }
+        }}
+        className="absolute inset-0 h-full w-full object-cover object-[100%_center] opacity-100 brightness-[0.98] contrast-[1.02] saturate-[1.02] scale-[1.01] md:object-[115%_center] md:brightness-[1.05] md:contrast-[1.03] md:saturate-[1.03]"
       />
 
       {/* Cinematic Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_45%,rgba(250,204,21,0.10),transparent_36%)]" />
 
       <motion.div
