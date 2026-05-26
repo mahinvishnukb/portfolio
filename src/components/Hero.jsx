@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
       {/* Background Image */}
       <img
-        src="/images/hero/heromain3.png"
+        src="/images/hero/heromain4.png"
         alt="Mahin Vishnu portfolio hero"
         className="absolute inset-0 h-full w-full object-cover object-[72%_center] opacity-100 brightness-[1.2] contrast-[1.08] saturate-[1.1] scale-[1.02] md:object-right md:brightness-[1.45] md:contrast-[1.15] md:saturate-[1.15]"
       />
