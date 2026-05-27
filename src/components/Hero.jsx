@@ -21,11 +21,11 @@ const Hero = () => {
             e.currentTarget.src = fallbackImages[currentIndex];
           }
         }}
-        className="absolute inset-0 h-full w-full object-cover object-[100%_center] opacity-100 brightness-[0.98] contrast-[1.02] saturate-[1.02] scale-[1.01] md:object-[115%_center] md:brightness-[1.05] md:contrast-[1.03] md:saturate-[1.03]"
+        className="absolute inset-0 h-full w-full translate-x-[26vw] scale-[1.18] object-cover object-center opacity-55 brightness-[0.82] contrast-[1.04] saturate-[0.95] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-75 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.05] md:contrast-[1.03] md:saturate-[1.03]"
       />
 
       {/* Cinematic Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/35 to-transparent md:via-black/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_45%,rgba(250,204,21,0.10),transparent_36%)]" />
 
@@ -33,14 +33,14 @@ const Hero = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24 md:px-10 md:py-28"
+        className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-24 sm:px-6 md:px-10 md:py-28"
       >
-        <div className="w-full max-w-3xl pt-14 sm:pt-20 md:pt-0">
-          <p className="mb-5 text-xs italic tracking-[0.2em] text-zinc-300 sm:text-sm md:text-lg">
+        <div className="w-full max-w-[92vw] pt-16 sm:max-w-3xl sm:pt-20 md:pt-0">
+          <p className="mb-4 max-w-[90vw] text-[11px] italic tracking-[0.18em] text-zinc-300 sm:mb-5 sm:text-sm md:text-lg">
             Built with discipline. Driven by growth.
           </p>
 
-          <h1 className="text-[4rem] font-black uppercase leading-[0.82] tracking-tight sm:text-[5.2rem] md:text-8xl lg:text-9xl">
+          <h1 className="text-[3.7rem] font-black uppercase leading-[0.84] tracking-tight min-[390px]:text-[4.15rem] sm:text-[5.2rem] md:text-8xl lg:text-9xl">
             <span className="block text-yellow-400 drop-shadow-[0_0_24px_rgba(250,204,21,0.25)]">
               Ambition
             </span>
@@ -54,7 +54,7 @@ const Hero = () => {
 
           <div className="my-8 h-1 w-20 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.6)] sm:my-10 sm:w-24" />
 
-          <p className="max-w-xl text-base leading-7 text-zinc-200 sm:text-lg sm:leading-8 md:text-xl">
+          <p className="max-w-[92vw] text-base leading-7 text-zinc-200 sm:max-w-xl sm:text-lg sm:leading-8 md:text-xl">
             I build practical data and technology solutions with a focus on
             <span className="font-bold text-yellow-400"> clarity</span>,
             <span className="font-bold text-yellow-400"> consistency</span>, and
@@ -77,7 +77,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/10 pt-7 sm:mt-16 sm:gap-6 sm:pt-8">
+          <div className="mt-12 grid max-w-[92vw] grid-cols-3 gap-2 border-t border-white/10 pt-6 sm:mt-16 sm:max-w-2xl sm:gap-6 sm:pt-8">
             <div className="flex flex-col items-center border-r border-white/10 pr-4 text-center sm:pr-6">
               <div className="mb-3 text-yellow-400">
                 <svg
@@ -86,7 +86,7 @@ const Hero = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.7}
                   stroke="currentColor"
-                  className="h-9 w-9"
+                  className="h-7 w-7 sm:h-9 sm:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -96,11 +96,11 @@ const Hero = () => {
                 </svg>
               </div>
 
-              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">
+              <h3 className="text-2xl font-black text-yellow-400 sm:text-4xl">
                 5+
               </h3>
 
-              <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
+              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
                 Projects
               </p>
             </div>
@@ -113,7 +113,7 @@ const Hero = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.7}
                   stroke="currentColor"
-                  className="h-9 w-9"
+                  className="h-7 w-7 sm:h-9 sm:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -123,11 +123,11 @@ const Hero = () => {
                 </svg>
               </div>
 
-              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">
+              <h3 className="text-2xl font-black text-yellow-400 sm:text-4xl">
                 10+
               </h3>
 
-              <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
+              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
                 Technologies
               </p>
             </div>
@@ -140,7 +140,7 @@ const Hero = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.7}
                   stroke="currentColor"
-                  className="h-9 w-9"
+                  className="h-7 w-7 sm:h-9 sm:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -150,11 +150,11 @@ const Hero = () => {
                 </svg>
               </div>
 
-              <h3 className="text-3xl font-black text-yellow-400 sm:text-4xl">
+              <h3 className="text-2xl font-black text-yellow-400 sm:text-4xl">
                 3+
               </h3>
 
-              <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-300 sm:text-xs">
+              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
                 Leadership Roles
               </p>
             </div>
