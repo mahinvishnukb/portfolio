@@ -21,13 +21,19 @@ const Hero = () => {
             e.currentTarget.src = fallbackImages[currentIndex];
           }
         }}
-        className="absolute inset-0 h-full w-full translate-x-[26vw] scale-[1.18] object-cover object-center opacity-55 brightness-[0.82] contrast-[1.04] saturate-[0.95] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-75 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.05] md:contrast-[1.03] md:saturate-[1.03]"
+        className="absolute inset-0 h-full w-full translate-x-[26vw] scale-[1.18] object-cover object-center opacity-65 brightness-[0.92] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
       />
 
       {/* Cinematic Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/35 to-transparent md:via-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-transparent md:via-black/5" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_45%,rgba(250,204,21,0.10),transparent_36%)]" />
+
+      {/* Soft Background Depth Elements */}
+      <div className="absolute left-[12%] top-[22%] h-72 w-72 rounded-full bg-yellow-400/5 blur-3xl" />
+      <div className="absolute bottom-[12%] left-[35%] h-56 w-56 rounded-full bg-white/[0.03] blur-3xl" />
+      <div className="absolute right-[18%] top-[30%] h-80 w-80 rounded-full bg-yellow-500/[0.04] blur-[140px]" />
+      <div className="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:120px_120px]" />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -36,29 +42,41 @@ const Hero = () => {
         className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-24 sm:px-6 md:px-10 md:py-28"
       >
         <div className="w-full max-w-[92vw] pt-16 sm:max-w-3xl sm:pt-20 md:pt-0">
-          <p className="mb-4 max-w-[90vw] text-[11px] italic tracking-[0.18em] text-zinc-300 sm:mb-5 sm:text-sm md:text-lg">
-            Built with discipline. Driven by growth.
-          </p>
 
-          <h1 className="text-[3.7rem] font-black uppercase leading-[0.84] tracking-tight min-[390px]:text-[4.15rem] sm:text-[5.2rem] md:text-8xl lg:text-9xl">
-            <span className="block text-yellow-400 drop-shadow-[0_0_24px_rgba(250,204,21,0.25)]">
-              Ambition
-            </span>
-            <span className="block text-white drop-shadow-[0_0_24px_rgba(255,255,255,0.18)]">
-              Focus
-            </span>
-            <span className="block text-yellow-400 drop-shadow-[0_0_24px_rgba(250,204,21,0.25)]">
-              Impact
-            </span>
-          </h1>
+          <div className="space-y-1">
+            <div className="space-y-1">
+              <h1 className="max-w-3xl text-[1.2rem] font-medium leading-[1.8] text-yellow-400 sm:text-[1.7rem] md:text-[2.1rem]">
+                தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்
+                <br />
+                மெய்வருத்தக் கூலி தரும்.
+              </h1>
+
+              <div className="flex justify-end max-w-3xl">
+                <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
+                  திருவள்ளுவர் · குறள் 619
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <p className="max-w-3xl text-[1rem] leading-[1.9] text-zinc-200 sm:text-[1.2rem] md:text-[1.35rem]">
+              Even if god has given up, perseverance will pay
+              <br />
+              the wages for one's efforts.
+              </p>
+
+              <div className="flex justify-end max-w-3xl">
+                <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
+                  — Thiruvalluvar · Kural 619
+                </p>
+              </div>
+            </div>
+          </div>
 
           <div className="my-8 h-1 w-20 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.6)] sm:my-10 sm:w-24" />
 
           <p className="max-w-[92vw] text-base leading-7 text-zinc-200 sm:max-w-xl sm:text-lg sm:leading-8 md:text-xl">
-            I build practical data and technology solutions with a focus on
-            <span className="font-bold text-yellow-400"> clarity</span>,
-            <span className="font-bold text-yellow-400"> consistency</span>, and
-            <span className="font-bold text-yellow-400"> real-world impact</span>.
+            Building practical projects while continuously learning and improving through experience.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-5">

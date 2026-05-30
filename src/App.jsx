@@ -5,35 +5,36 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Photography from "./components/Photography";
+import Achievements from "./components/Achievements";
 
 const projects = [
   {
     title: "Maritime Operations & Crew Analytics Platform",
     type: "Featured Analytics Project",
     description:
-      "An end-to-end analytics project focused on maritime crew operations, ship data, maintenance logs, incident reports, and operational KPI tracking.",
+      "A data analytics project built to organize maritime crew, ship, maintenance, incident, and operations data into a simple reporting system.",
     tech: ["Python", "PostgreSQL", "Pandas", "SQL", "Data Analytics"],
   },
   {
     title: "Word-Level Sign Language Recognition",
     type: "Machine Learning Project",
     description:
-      "A machine learning project built to support communication accessibility through computer vision and gesture recognition techniques.",
+      "A machine learning project that uses computer vision methods to recognize word-level sign language gestures.",
     tech: ["Python", "YOLOv5", "MediaPipe", "SVM", "Machine Learning"],
   },
   {
     title: "Fake Currency Detection",
     type: "Classification Project",
     description:
-      "A classification project focused on identifying genuine and fake currency patterns using structured data analysis.",
+      "A classification project that studies currency data patterns to help identify whether a note is genuine or fake.",
     tech: ["Python", "Machine Learning", "Classification", "Data Analysis"],
   },
   {
-    title: "Photography Portfolio",
-    type: "Creative Work",
+    title: "Maze Pathfinding Algorithm Visualizer",
+    type: "Algorithm Experiment",
     description:
-      "A visual collection focused on portrait photography, wildlife photography, travel, composition, and creative storytelling.",
-    tech: ["Photography", "Visual Storytelling", "Editing", "Composition"],
+      "An experimental project built with Matplotlib to test and compare five maze pathfinding algorithms, including A* and a Genetic Algorithm, to understand how each approach performs.",
+    tech: ["Python", "Matplotlib", "Algorithms", "A*", "Genetic Algorithm"],
   },
 ];
 
@@ -51,11 +52,11 @@ function ProjectsSection() {
           </p>
 
           <h2 className="text-4xl font-black leading-tight md:text-6xl">
-            Practical Work with <span className="text-red-400">Real Purpose</span>
+            Projects I Have <span className="text-red-400">Worked On</span>
           </h2>
 
           <p className="mt-5 text-base leading-7 text-zinc-400 sm:mt-6 sm:text-lg sm:leading-8">
-            A selection of analytics, machine learning, and creative work that reflects my technical and visual interests.
+            A few projects where I practiced data analytics, machine learning, algorithms, and problem solving through hands-on work.
           </p>
         </div>
 
@@ -109,6 +110,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Achievements />
       <ProjectsSection />
       <Skills />
       <Photography />

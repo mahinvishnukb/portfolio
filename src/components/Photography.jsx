@@ -100,28 +100,28 @@ const Photography = () => {
   return (
     <section
       id="photography"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-20 text-white md:px-12"
+      className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-16 text-white md:px-12 md:py-20"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.12),transparent_35%)]" />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10">
         <motion.div
-          initial={{ opacity: 0, x: -45 }}
+          initial={{ opacity: 0, x: 45 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-2xl"
+          className="order-2 w-full max-w-2xl lg:order-2"
         >
-          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-teal-300">
+          <p className="mb-3 text-xs uppercase tracking-[0.28em] text-teal-300 sm:text-sm sm:tracking-[0.35em]">
             Photography
           </p>
 
-          <h2 className="text-4xl font-black leading-tight md:text-6xl">
+          <h2 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
             Stories I Notice
             <span className="text-amber-300"> Through My Lens</span>
           </h2>
 
-          <p className="mt-6 max-w-xl leading-8 text-slate-300">
+          <p className="mt-5 max-w-xl text-base leading-7 text-slate-300 sm:mt-6 sm:leading-8">
             Photography is where I slow down and pay attention. Whether it is a
             quiet wildlife frame, a natural portrait, or a moment from travel, I
             enjoy capturing the small details that make a scene feel alive.
@@ -129,11 +129,11 @@ const Photography = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 60 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9, x: -45 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="relative h-[520px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.5)] md:h-[590px] lg:h-[620px]"
+          className="order-1 relative h-[420px] overflow-hidden rounded-[1.7rem] border border-white/10 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:h-[520px] sm:rounded-[2rem] md:h-[590px] lg:order-1 lg:h-[620px]"
         >
           <AnimatePresence mode="wait">
             <motion.img
@@ -144,7 +144,7 @@ const Photography = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.04 }}
               transition={{ duration: 1.4, ease: "easeInOut" }}
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center transition duration-700"
             />
           </AnimatePresence>
 

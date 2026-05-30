@@ -11,23 +11,17 @@ const About = () => {
 
         <h2 className="max-w-4xl text-4xl font-black leading-tight md:text-6xl">
           Computer Science,
-          <span className="text-yellow-400"> Analytics & Creativity</span>
+          <span className="text-yellow-400"> Technology & Learning</span>
         </h2>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:gap-10">
           <div>
             <p className="text-base leading-8 text-zinc-300 sm:text-lg">
-              I am a Computer Science graduate student at St. Francis Xavier
-              University with interests across analytics, technology, photography,
-              and travel. I enjoy learning by building, exploring new ideas, and
-              creating work that feels useful, clean, and meaningful.
+              I am a Master of Applied Computer Science student at St. Francis Xavier University. I enjoy working on practical projects, learning through experience, and building skills in analytics, software, and problem solving.
             </p>
 
             <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">
-              My technical interests are focused on data analytics, dashboards,
-              SQL, Python, machine learning, and practical business solutions.
-              At the same time, photography helps me see details, composition,
-              people, places, and stories from a more creative perspective.
+              Outside academics, I have been involved in student leadership, campus activities, photography, and collaborative projects. I enjoy working with people, taking responsibility, and continuously improving through experience.
             </p>
           </div>
 
@@ -37,13 +31,22 @@ const About = () => {
                 Education
               </h3>
 
-              <p className="mt-3 text-zinc-300">
+              <p className="mt-2 text-zinc-300">
                 Master of Applied Computer Science
               </p>
 
               <p className="text-sm text-zinc-500">
                 St. Francis Xavier University
               </p>
+
+              <p className="mt-2 text-zinc-300">
+                Bachelor of Engineering in Computer Science
+              </p>
+
+              <p className="text-sm text-zinc-500">
+                Kongu Engineering College
+              </p>
+
             </div>
 
             <div className="rounded-2xl border border-zinc-800 bg-black p-5 transition duration-300 hover:border-yellow-400/60 hover:shadow-[0_0_30px_rgba(250,204,21,0.08)] sm:p-6">
@@ -52,7 +55,7 @@ const About = () => {
               </h3>
 
               <p className="mt-3 text-zinc-300">
-                Python • SQL • Power BI • React • Machine Learning • Data Analytics
+                Python • SQL • React • PostgreSQL • Machine Learning • Data Analytics
               </p>
             </div>
 
@@ -62,7 +65,7 @@ const About = () => {
               </h3>
 
               <p className="mt-3 text-zinc-300">
-                Photography • Travel • Wildlife • Visual Storytelling • Design • Exploration
+                Photography • Student Leadership • Team Coordination • Travel • Wildlife
               </p>
             </div>
           </div>
