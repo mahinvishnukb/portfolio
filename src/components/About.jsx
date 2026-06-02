@@ -25,7 +25,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:gap-5">
+          <div className="-mt-10 grid gap-4 sm:-mt-14 sm:gap-5 md:-mt-20">
             <div className="rounded-2xl border border-zinc-800 bg-black p-5 transition duration-300 hover:border-yellow-400/60 hover:shadow-[0_0_30px_rgba(250,204,21,0.08)] sm:p-6">
               <h3 className="text-lg font-bold text-yellow-400 sm:text-xl">
                 Education
