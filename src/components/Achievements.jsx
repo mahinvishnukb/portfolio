@@ -24,7 +24,7 @@ const achievementPhotos = [
   "/images/IMG_7610.JPG",
   "/images/IMG_7780.JPG",
   "/images/IMG_8195 2.jpg",
-  "/Volumes/Shield/Portfolio/public/images/PHOTO-2025-03-27-19-50-51.jpg",
+  "/images/PHOTO-2025-03-27-19-50-51.jpg",
 ];
 
 function Achievements() {
