@@ -103,7 +103,7 @@ function Achievements() {
                     </h3>
 
                     <p className="mt-3 text-xs uppercase tracking-[0.2em] text-zinc-500">
-                      Hover to read more
+                      
                     </p>
                   </div>
 
