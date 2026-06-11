@@ -92,7 +92,7 @@ const Photography = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % mixedPhotos.length);
-    }, 4000);
+    }, 6500);
 
     return () => clearInterval(interval);
   }, [mixedPhotos.length]);
@@ -140,11 +140,11 @@ const Photography = () => {
               key={mixedPhotos[activeIndex].image}
               src={mixedPhotos[activeIndex].image}
               alt={mixedPhotos[activeIndex].title}
-              initial={{ opacity: 0, scale: 1.08 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.04 }}
-              transition={{ duration: 1.4, ease: "easeInOut" }}
-              className="absolute inset-0 h-full w-full object-cover object-center transition duration-700"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 2.2, ease: "easeInOut" }}
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
           </AnimatePresence>
 
