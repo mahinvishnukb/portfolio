@@ -33,7 +33,7 @@ function Achievements() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % achievementPhotos.length);
-    }, 4000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
@@ -41,17 +41,17 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-10 text-white md:px-12 md:py-12"
+      className="relative overflow-hidden bg-black px-6 py-14 text-white md:min-h-screen md:px-12 md:py-12"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.08),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="mb-6 max-w-3xl md:mb-7">
+        <div className="mb-8 max-w-3xl md:mb-7">
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-yellow-400">
             Achievements
           </p>
 
-          <h2 className="text-3xl font-black leading-tight md:text-5xl">
+          <h2 className="text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
             Leadership & Experience
           </h2>
 
@@ -60,31 +60,35 @@ function Achievements() {
           </p>
         </div>
 
-        <div className="grid items-center gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative h-[300px] overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.45)] sm:h-[360px] md:h-[420px] lg:h-[455px]"
+            className="relative h-[260px] overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.45)] sm:h-[340px] md:h-[420px] lg:h-[455px]"
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="sync">
               <motion.img
                 key={achievementPhotos[activeIndex]}
                 src={achievementPhotos[activeIndex]}
                 alt="Achievement"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, scale: 1.03 }}
+                initial={{ opacity: 0, scale: 1.02 }}
+                animate={{ opacity: 1, scale: 1.06 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1.8, ease: "easeInOut" }}
+                transition={{
+                  opacity: { duration: 2.3, ease: "easeInOut" },
+                  scale: { duration: 7, ease: "linear" },
+                }}
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </AnimatePresence>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
           </motion.div>
 
-          <div className="grid gap-4 lg:-mt-4">
+          <div className="grid gap-3 lg:-mt-4">
             {achievements.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -92,13 +96,13 @@ function Achievements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.12 }}
-                className="group h-[135px] [perspective:1000px] md:h-[145px]"
+                className="group h-[120px] [perspective:1000px] sm:h-[130px] md:h-[145px]"
               >
                 <div className="relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 rounded-3xl border border-zinc-800 bg-zinc-950 p-5 [backface-visibility:hidden] transition duration-300 group-hover:border-yellow-400/50 md:p-6">
                     <div className="mb-4 h-1 w-14 rounded-full bg-yellow-400" />
 
-                    <h3 className="text-xl font-bold text-yellow-400 md:text-2xl">
+                    <h3 className="text-lg font-bold text-yellow-400 sm:text-xl md:text-2xl">
                       {item.title}
                     </h3>
 
@@ -108,7 +112,7 @@ function Achievements() {
                   </div>
 
                   <div className="absolute inset-0 rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-6">
-                    <p className="text-sm leading-7 text-zinc-300 md:text-base">
+                    <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6 md:text-base">
                       {item.description}
                     </p>
                   </div>
