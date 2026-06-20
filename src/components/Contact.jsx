@@ -43,17 +43,17 @@ const Contact = () => {
             <div className="mt-10 space-y-6">
               <a
                 href="mailto:mahinvishnukb@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Mahin,"
-                className="group flex items-center justify-between rounded-2xl border border-zinc-800 bg-black/70 p-5 transition duration-300 hover:border-yellow-400/60 hover:bg-yellow-400/10"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-zinc-800 bg-black/70 p-5 transition duration-300 hover:border-yellow-400/60 hover:bg-yellow-400/10"
               >
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
                     Email
                   </p>
-                  <p className="mt-2 text-lg font-semibold text-zinc-100">
+                  <p className="mt-2 truncate text-base font-semibold text-zinc-100 sm:text-lg">
                     mahinvishnukb@gmail.com
                   </p>
                 </div>
-                <span className="text-2xl text-yellow-400 transition group-hover:translate-x-1">
+                <span className="shrink-0 text-2xl text-yellow-400 transition group-hover:translate-x-1">
                   →
                 </span>
               </a>
@@ -62,19 +62,22 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/mahin-vishnu-k-b-b53b45222"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-zinc-800 bg-black/70 p-5 transition duration-300 hover:border-yellow-400/60 hover:bg-yellow-400/10"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-zinc-800 bg-black/70 p-5 transition duration-300 hover:border-yellow-400/60 hover:bg-yellow-400/10"
               >
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
                     LinkedIn
                   </p>
 
-                  <p className="mt-2 text-lg font-semibold text-zinc-100">
+                  <p className="mt-2 truncate text-base font-semibold text-zinc-100 sm:text-lg">
+                    mahin-vishnu-k-b
+                  </p>
+                  <p className="text-xs text-zinc-500">
                     linkedin.com/in/mahin-vishnu-k-b-b53b45222
                   </p>
                 </div>
 
-                <span className="text-2xl text-yellow-400 transition group-hover:translate-x-1">
+                <span className="shrink-0 text-2xl text-yellow-400 transition group-hover:translate-x-1">
                   →
                 </span>
               </a>

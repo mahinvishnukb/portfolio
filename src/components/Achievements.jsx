@@ -27,6 +27,43 @@ const achievementPhotos = [
   "/images/PHOTO-2025-03-27-19-50-51.jpg",
 ];
 
+function AchievementCard({ item, index }) {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.12 }}
+      className="h-[130px] cursor-pointer [perspective:1000px] sm:h-[140px] md:h-[150px]"
+      onClick={() => setFlipped((f) => !f)}
+    >
+      <div
+        className={`relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""} hover:[transform:rotateY(180deg)]`}
+      >
+        <div className="absolute inset-0 rounded-3xl border border-zinc-800 bg-zinc-950 p-5 [backface-visibility:hidden] transition duration-300 md:p-6">
+          <div className="mb-3 h-1 w-14 rounded-full bg-yellow-400" />
+
+          <h3 className="text-base font-bold text-yellow-400 sm:text-xl md:text-2xl">
+            {item.title}
+          </h3>
+
+          <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+            Tap to read more
+          </p>
+        </div>
+
+        <div className="absolute inset-0 rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-6">
+          <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6">
+            {item.description}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 function Achievements() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -90,34 +127,7 @@ function Achievements() {
 
           <div className="grid gap-3 lg:-mt-4">
             {achievements.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.12 }}
-                className="group h-[120px] [perspective:1000px] sm:h-[130px] md:h-[145px]"
-              >
-                <div className="relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div className="absolute inset-0 rounded-3xl border border-zinc-800 bg-zinc-950 p-5 [backface-visibility:hidden] transition duration-300 group-hover:border-yellow-400/50 md:p-6">
-                    <div className="mb-4 h-1 w-14 rounded-full bg-yellow-400" />
-
-                    <h3 className="text-lg font-bold text-yellow-400 sm:text-xl md:text-2xl">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-3 text-xs uppercase tracking-[0.2em] text-zinc-500">
-                      
-                    </p>
-                  </div>
-
-                  <div className="absolute inset-0 rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-6">
-                    <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6 md:text-base">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+              <AchievementCard key={item.title} item={item} index={index} />
             ))}
           </div>
         </div>

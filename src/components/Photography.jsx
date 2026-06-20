@@ -100,7 +100,7 @@ const Photography = () => {
   return (
     <section
       id="photography"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-16 text-white md:px-12 md:py-20"
+      className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-14 text-white md:px-12 md:py-20"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.12),transparent_35%)]" />
 
@@ -116,7 +116,7 @@ const Photography = () => {
             Photography
           </p>
 
-          <h2 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
+          <h2 className="text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
             Stories I Notice
             <span className="text-amber-300"> Through My Lens</span>
           </h2>

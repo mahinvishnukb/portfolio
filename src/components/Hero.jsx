@@ -45,10 +45,8 @@ const Hero = () => {
 
           <div className="space-y-1">
             <div className="space-y-1">
-              <h1 className="max-w-3xl text-[1.2rem] font-medium leading-[1.8] text-yellow-400 sm:text-[1.7rem] md:text-[2.1rem]">
-                தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்
-                <br />
-                மெய்வருத்தக் கூலி தரும்.
+              <h1 className="max-w-3xl text-[1.05rem] font-medium leading-[1.8] text-yellow-400 sm:text-[1.7rem] md:text-[2.1rem]">
+                தெய்வத்தான் ஆகா தெனினும் முயற்சிதன் மெய்வருத்தக் கூலி தரும்.
               </h1>
 
               <div className="flex justify-end max-w-3xl">
@@ -118,7 +116,7 @@ const Hero = () => {
                 5+
               </h3>
 
-              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
+              <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
                 Projects
               </p>
             </div>
@@ -145,7 +143,7 @@ const Hero = () => {
                 10+
               </h3>
 
-              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
+              <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
                 Technologies
               </p>
             </div>
@@ -172,7 +170,7 @@ const Hero = () => {
                 3+
               </h3>
 
-              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
+              <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
                 Leadership Roles
               </p>
             </div>
