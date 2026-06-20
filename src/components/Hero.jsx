@@ -21,7 +21,7 @@ const Hero = () => {
             e.currentTarget.src = fallbackImages[currentIndex];
           }
         }}
-        className="absolute inset-0 h-full w-full translate-x-0 scale-[1.05] object-cover object-[65%_top] opacity-75 brightness-[0.85] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
+        className="absolute inset-0 h-full w-full translate-x-[18vw] scale-[1.05] object-cover object-[50%_top] opacity-75 brightness-[0.85] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
       />
 
       {/* Cinematic Overlays */}
