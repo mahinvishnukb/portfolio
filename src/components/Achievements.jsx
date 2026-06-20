@@ -21,9 +21,9 @@ const achievements = [
 
 const achievementPhotos = [
   "/images/IMG_6378.jpg",
-  "/images/IMG_7610.JPG",
+  "/images/IMG_7610.jpg",
   "/images/IMG_7780.JPG",
-  "/images/IMG_8195 2.jpg",
+  "/images/IMG_8195-2.jpg",
   "/images/PHOTO-2025-03-27-19-50-51.jpg",
 ];
 
