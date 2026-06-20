@@ -45,9 +45,9 @@ const Hero = () => {
 
           <div className="space-y-1">
             <div className="space-y-1">
-              <h1 className="max-w-3xl text-[1.05rem] font-medium leading-[1.8] text-yellow-400 sm:text-[1.7rem] md:text-[2.1rem]">
+              <p className="max-w-3xl text-[1.05rem] font-medium leading-[1.8] text-yellow-400 sm:text-[1.7rem] md:text-[2.1rem]">
                 தெய்வத்தான் ஆகா தெனினும் முயற்சிதன் மெய்வருத்தக் கூலி தரும்.
-              </h1>
+              </p>
 
               <div className="flex justify-end max-w-3xl">
                 <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
@@ -58,9 +58,7 @@ const Hero = () => {
 
             <div className="space-y-1">
               <p className="max-w-3xl text-[1rem] leading-[1.9] text-zinc-200 sm:text-[1.2rem] md:text-[1.35rem]">
-              Even if god has given up, perseverance will pay
-              <br />
-              the wages for one's efforts.
+                Even if god has given up, perseverance will pay the wages for one's efforts.
               </p>
 
               <div className="flex justify-end max-w-3xl">
@@ -93,7 +91,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-12 grid max-w-[92vw] grid-cols-3 gap-2 border-t border-white/10 pt-6 sm:mt-16 sm:max-w-2xl sm:gap-6 sm:pt-8">
+          <div className="mt-12 grid max-w-[92vw] !grid-cols-3 gap-2 border-t border-white/10 pt-6 sm:mt-16 sm:max-w-2xl sm:gap-6 sm:pt-8">
             <div className="flex flex-col items-center border-r border-white/10 pr-4 text-center sm:pr-6">
               <div className="mb-3 text-yellow-400">
                 <svg
