@@ -112,7 +112,7 @@ const Skills = () => {
             Skills
           </p>
 
-          <h2 className="text-3xl font-black sm:text-4xl md:text-6xl">
+          <h2 className="text-2xl font-black sm:text-4xl md:text-6xl">
             Skills Behind
             <span className="text-yellow-400"> My Work</span>
           </h2>

@@ -113,7 +113,7 @@ function ProjectsSection() {
             Projects
           </p>
 
-          <h2 className="text-3xl font-black leading-tight md:text-4xl">
+          <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
             Projects I Have <span className="text-red-400">Worked On</span>
           </h2>
 

@@ -88,7 +88,7 @@ function Achievements() {
             Achievements
           </p>
 
-          <h2 className="text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+          <h2 className="text-2xl font-black leading-tight sm:text-4xl md:text-5xl">
             Leadership & Experience
           </h2>
 

@@ -9,7 +9,7 @@ const About = () => {
           About Me
         </p>
 
-        <h2 className="max-w-4xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
+        <h2 className="max-w-4xl text-2xl font-black leading-tight sm:text-4xl md:text-6xl">
           Computer Science,
           <span className="text-yellow-400"> Technology & Learning</span>
         </h2>

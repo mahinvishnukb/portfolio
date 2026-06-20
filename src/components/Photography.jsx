@@ -116,7 +116,7 @@ const Photography = () => {
             Photography
           </p>
 
-          <h2 className="text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
+          <h2 className="text-2xl font-black leading-tight sm:text-5xl md:text-6xl">
             Stories I Notice
             <span className="text-amber-300"> Through My Lens</span>
           </h2>

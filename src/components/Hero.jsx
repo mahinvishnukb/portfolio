@@ -21,7 +21,7 @@ const Hero = () => {
             e.currentTarget.src = fallbackImages[currentIndex];
           }
         }}
-        className="absolute inset-0 h-full w-full translate-x-[26vw] scale-[1.18] object-cover object-center opacity-65 brightness-[0.92] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
+        className="absolute inset-0 h-full w-full translate-x-[8vw] scale-[1.08] object-cover object-top opacity-80 brightness-[0.85] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
       />
 
       {/* Cinematic Overlays */}
@@ -91,86 +91,32 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-12 grid max-w-[92vw] !grid-cols-3 gap-2 border-t border-white/10 pt-6 sm:mt-16 sm:max-w-2xl sm:gap-6 sm:pt-8">
-            <div className="flex flex-col items-center border-r border-white/10 pr-4 text-center sm:pr-6">
-              <div className="mb-3 text-yellow-400">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.7}
-                  stroke="currentColor"
-                  className="h-7 w-7 sm:h-9 sm:w-9"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25"
-                  />
-                </svg>
-              </div>
-
-              <h3 className="text-2xl font-black text-yellow-400 sm:text-4xl">
-                5+
-              </h3>
-
-              <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
-                Projects
-              </p>
+          <div
+            style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}
+            className="mt-10 w-full border-t border-white/10 pt-5 sm:mt-16 sm:pt-8"
+          >
+            <div className="flex flex-col items-center border-r border-white/10 px-2 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor" className="mb-2 h-5 w-5 text-yellow-400 sm:h-8 sm:w-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" />
+              </svg>
+              <span className="text-xl font-black text-yellow-400 sm:text-4xl">5+</span>
+              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Projects</span>
             </div>
 
-            <div className="flex flex-col items-center border-r border-white/10 px-4 text-center sm:px-6">
-              <div className="mb-3 text-yellow-400">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.7}
-                  stroke="currentColor"
-                  className="h-7 w-7 sm:h-9 sm:w-9"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 5.25h16.5v13.5H3.75V5.25Zm4.5 3h7.5m-7.5 3h7.5m-7.5 3h4.5"
-                  />
-                </svg>
-              </div>
-
-              <h3 className="text-2xl font-black text-yellow-400 sm:text-4xl">
-                10+
-              </h3>
-
-              <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
-                Technologies
-              </p>
+            <div className="flex flex-col items-center border-r border-white/10 px-2 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor" className="mb-2 h-5 w-5 text-yellow-400 sm:h-8 sm:w-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5v13.5H3.75V5.25Zm4.5 3h7.5m-7.5 3h7.5m-7.5 3h4.5" />
+              </svg>
+              <span className="text-xl font-black text-yellow-400 sm:text-4xl">10+</span>
+              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Technologies</span>
             </div>
 
-            <div className="flex flex-col items-center pl-4 text-center sm:pl-6">
-              <div className="mb-3 text-yellow-400">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.7}
-                  stroke="currentColor"
-                  className="h-7 w-7 sm:h-9 sm:w-9"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m9 12.75 2.25 2.25L15 9.75m6 2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  />
-                </svg>
-              </div>
-
-              <h3 className="text-2xl font-black text-yellow-400 sm:text-4xl">
-                3+
-              </h3>
-
-              <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.1em] text-zinc-300 sm:text-xs sm:tracking-[0.18em]">
-                Leadership Roles
-              </p>
+            <div className="flex flex-col items-center px-2 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor" className="mb-2 h-5 w-5 text-yellow-400 sm:h-8 sm:w-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 2.25 2.25L15 9.75m6 2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <span className="text-xl font-black text-yellow-400 sm:text-4xl">3+</span>
+              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Leadership</span>
             </div>
           </div>
         </div>

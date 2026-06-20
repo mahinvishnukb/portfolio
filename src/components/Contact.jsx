@@ -13,7 +13,7 @@ const Contact = () => {
             Contact
           </p>
 
-          <h2 className="text-4xl font-black leading-tight md:text-6xl">
+          <h2 className="text-2xl font-black leading-tight sm:text-4xl md:text-6xl">
             Let’s Connect
             <span className="text-yellow-400"> and Create</span>
           </h2>
