@@ -121,7 +121,7 @@ const Photography = () => {
             <span className="text-amber-300"> Through My Lens</span>
           </h2>
 
-          <p className="mt-5 max-w-xl text-base leading-7 text-slate-300 sm:mt-6 sm:leading-8">
+          <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:mt-6 sm:text-base sm:leading-8">
             Photography is where I slow down and pay attention. Whether it is a
             quiet wildlife frame, a natural portrait, or a moment from travel, I
             enjoy capturing the small details that make a scene feel alive.

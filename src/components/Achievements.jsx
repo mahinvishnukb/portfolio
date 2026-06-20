@@ -78,7 +78,7 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative overflow-hidden bg-black px-6 py-14 text-white md:min-h-screen md:px-12 md:py-12"
+      className="relative overflow-hidden bg-black px-6 py-14 text-white md:px-12 md:py-20"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.08),transparent_35%)]" />
 
@@ -92,7 +92,7 @@ function Achievements() {
             Leadership & Experience
           </h2>
 
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
+          <p className="mt-3 max-w-2xl text-xs leading-6 text-zinc-400 sm:text-sm sm:leading-7">
             A few experiences and recognitions from my campus work, student leadership, volunteering, and governance involvement.
           </p>
         </div>

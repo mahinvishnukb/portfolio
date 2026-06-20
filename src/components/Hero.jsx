@@ -21,11 +21,11 @@ const Hero = () => {
             e.currentTarget.src = fallbackImages[currentIndex];
           }
         }}
-        className="absolute inset-0 h-full w-full translate-x-[8vw] scale-[1.08] object-cover object-top opacity-80 brightness-[0.85] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
+        className="absolute inset-0 h-full w-full translate-x-0 scale-[1.05] object-cover object-[65%_top] opacity-75 brightness-[0.85] contrast-[1.08] saturate-[1.02] sm:translate-x-[18vw] sm:scale-[1.08] sm:opacity-85 md:translate-x-[10vw] md:scale-[1.01] md:opacity-100 md:brightness-[1.18] md:contrast-[1.08] md:saturate-[1.06]"
       />
 
       {/* Cinematic Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-transparent md:via-black/5" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20 md:from-black md:via-black/30 md:to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_45%,rgba(250,204,21,0.10),transparent_36%)]" />
 

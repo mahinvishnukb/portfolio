@@ -16,11 +16,11 @@ const About = () => {
 
         <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-10">
           <div>
-            <p className="text-sm leading-7 text-zinc-300 sm:text-base md:text-lg">
+            <p className="text-sm leading-6 text-zinc-300 sm:text-base sm:leading-7 md:text-lg">
               I recently completed my Master of Applied Computer Science at St. Francis Xavier University. I enjoy building practical projects, solving real-world problems, and continuously learning through hands-on experience in analytics, software development, and technology.
             </p>
 
-            <p className="mt-5 text-sm leading-7 text-zinc-300 sm:text-base md:text-lg">
+            <p className="mt-4 text-sm leading-6 text-zinc-300 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
               Outside academics, I have been involved in student leadership, campus activities, photography, and collaborative projects. I enjoy working with people, taking responsibility, and continuously improving through experience.
             </p>
           </div>

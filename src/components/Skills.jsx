@@ -68,28 +68,28 @@ function SkillCard({ skill }) {
 
   return (
     <div
-      className="h-52 cursor-pointer [perspective:1000px] sm:h-56"
+      className="h-44 cursor-pointer [perspective:1000px] sm:h-52"
       onClick={() => setFlipped((f) => !f)}
     >
       <div
         className={`relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""} hover:[transform:rotateY(180deg)]`}
       >
-        <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-center shadow-2xl [backface-visibility:hidden]">
-          <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/25 bg-yellow-400/10 text-2xl font-black text-yellow-300 shadow-[0_0_28px_rgba(250,204,21,0.10)] sm:h-20 sm:w-20 sm:text-3xl">
+        <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl border border-zinc-800 bg-zinc-950 p-5 text-center shadow-2xl [backface-visibility:hidden]">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-yellow-400/25 bg-yellow-400/10 text-lg font-black text-yellow-300 sm:mb-4 sm:h-16 sm:w-16 sm:text-2xl">
             {skill.logo}
           </div>
 
-          <h3 className="text-xl font-black text-white sm:text-2xl">
+          <h3 className="text-base font-black text-white sm:text-xl">
             {skill.name}
           </h3>
 
-          <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-zinc-600">
+          <p className="mt-1.5 text-[9px] uppercase tracking-[0.18em] text-zinc-600">
             Tap to learn
           </p>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center rounded-3xl border border-yellow-400/50 bg-zinc-950 p-8 text-center shadow-[0_0_45px_rgba(250,204,21,0.16)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <p className="text-base font-semibold leading-7 text-zinc-200 sm:text-lg sm:leading-8">
+        <div className="absolute inset-0 flex items-center justify-center rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 text-center shadow-[0_0_45px_rgba(250,204,21,0.16)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <p className="text-sm font-semibold leading-6 text-zinc-200 sm:text-base sm:leading-7">
             {skill.meaning}
           </p>
         </div>
@@ -117,7 +117,7 @@ const Skills = () => {
             <span className="text-yellow-400"> My Work</span>
           </h2>
 
-          <p className="mt-4 text-base leading-7 text-zinc-400 sm:mt-6 sm:text-lg sm:leading-8">
+          <p className="mt-4 text-sm leading-7 text-zinc-400 sm:mt-6 sm:text-lg sm:leading-8">
             A focused mix of technical, analytical, and creative skills that
             support the way I build projects and present ideas clearly.
           </p>
