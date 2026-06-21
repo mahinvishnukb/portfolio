@@ -10,6 +10,15 @@ import Achievements from "./components/Achievements";
 
 const projects = [
   {
+    title: "Enterprise GenAI Operations Assistant",
+    type: "Featured AI / GenAI Project",
+    description:
+      "A production-grade multi-agent AI platform with RAG (vector search over documents), NL2SQL (natural language to database queries), analytics, and conversation agents — all auto-routed through a single chat interface. Built with FastAPI, React, ChromaDB, SQLAlchemy, and supports OpenAI/Anthropic/mock providers.",
+    tech: ["Python", "FastAPI", "React", "TypeScript", "RAG", "NL2SQL", "Multi-Agent", "ChromaDB", "SQLAlchemy"],
+    link: "https://enterprise-genai-ops-assistant-git-master-mahinvishnu.vercel.app",
+    github: "https://github.com/mahinvishnukb/enterprise-genai-ops-assistant",
+  },
+  {
     title: "Maritime Operations & Crew Analytics Platform",
     type: "Featured Analytics Project",
     description:
@@ -75,25 +84,42 @@ function ProjectCard({ project, index }) {
           </p>
         </div>
 
-        <div className="absolute inset-0 rounded-3xl border border-red-400/60 bg-black/95 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <p className="mb-3 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
+        <div className="absolute inset-0 rounded-3xl border border-red-400/60 bg-black/95 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col">
+          <p className="mb-2 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
             {project.type}
           </p>
 
-          <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6">
+          <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6 flex-1 overflow-hidden">
             {project.description}
           </p>
 
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {project.tech.map((item) => (
+          <div className="mt-2 flex flex-wrap gap-1">
+            {project.tech.slice(0, 5).map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-red-400/20 bg-red-400/10 px-2 py-1 text-[9px] font-semibold uppercase tracking-wide text-red-300"
+                className="rounded-full border border-red-400/20 bg-red-400/10 px-2 py-0.5 text-[8px] font-semibold uppercase tracking-wide text-red-300"
               >
                 {item}
               </span>
             ))}
           </div>
+
+          {(project.link || project.github) && (
+            <div className="mt-2 flex gap-2" onClick={e => e.stopPropagation()}>
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer"
+                  className="text-[9px] uppercase tracking-widest text-red-400 border border-red-400/40 rounded-full px-2 py-0.5 hover:bg-red-400/10 transition-colors">
+                  Live Demo →
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer"
+                  className="text-[9px] uppercase tracking-widest text-zinc-400 border border-zinc-700 rounded-full px-2 py-0.5 hover:bg-zinc-800 transition-colors">
+                  GitHub →
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -118,7 +144,7 @@ function ProjectsSection() {
           </h2>
 
           <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base">
-            A few projects where I practiced data analytics, machine learning, algorithms, and problem solving through hands-on work.
+            Projects spanning GenAI, multi-agent systems, data analytics, machine learning, and algorithm design — built for real-world problems.
           </p>
         </div>
 
