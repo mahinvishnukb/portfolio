@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Photography from "./components/Photography";
 import Achievements from "./components/Achievements";
+import Experience from "./components/Experience";
 
 const projects = [
   {
@@ -166,6 +167,7 @@ function App() {
       <About />
       <Achievements />
       <ProjectsSection />
+      <Experience />
       <Skills />
       <Photography />
       <Contact />
