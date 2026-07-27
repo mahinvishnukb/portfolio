@@ -1,10 +1,52 @@
 @import "tailwindcss";
 
+/* ============================================================
+   CROSS-PLATFORM LAYOUT CONSISTENCY
+   Keeps the site rendering identically on macOS, Windows,
+   Android and iOS. Read the comments before changing anything.
+   ============================================================ */
+
 html {
   scroll-behavior: smooth;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+
+  /* 1. Windows/Linux use CLASSIC scrollbars that occupy real layout width
+     (~15px); macOS uses OVERLAY scrollbars that float above content.
+     That difference alone shifts every centered container sideways on
+     Windows. Reserving the gutter makes the usable width identical
+     everywhere, and also stops content jumping when a scrollbar appears. */
+  scrollbar-gutter: stable;
+
+  /* 2. Windows scrollbars default to a wide light-grey bar that clashes
+     with a dark site. Render a slim dark one to match macOS. */
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 transparent;
+
+  /* 3. Lock the root text size. Prevents Windows browser zoom / display
+     scaling from compounding with rem-based sizing. */
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* WebKit-specific scrollbar styling (Chrome / Edge / Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #52525b;
 }
 
 body {
@@ -12,9 +54,29 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  font-family: Inter, sans-serif;
   background: #0f172a;
   color: white;
+
+  /* 4. THE BIG ONE. Previously this said `Inter, sans-serif` but Inter was
+     never actually loaded, so every machine silently fell back to its own
+     default: San Francisco/Helvetica on macOS, Segoe UI/Arial on Windows.
+     Those fonts have different character widths, so text wrapped at
+     different points and every block shifted. Inter is now loaded from
+     index.html, so all devices measure text identically.
+     The fallbacks below are ordered to have near-identical metrics. */
+  font-family: "Inter", "Inter var", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* 5. Don't let the browser fake bold/italic weights — synthesized faces
+     are noticeably wider on Windows and break line wrapping. */
+  font-synthesis: none;
+
+  /* 6. Normalize glyph rasterization so weights look comparable. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+  font-variant-ligatures: none;
 }
 
 #root {
@@ -32,9 +94,42 @@ video {
   max-width: 100%;
 }
 
+/* 7. Numbers in stats/dates line up in equal-width columns instead of
+   jittering between platforms. */
+time,
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 8. `100vh` on mobile includes the browser's collapsing address bar, so
+   full-height sections overflow on iOS/Android. `svh` uses the SMALL
+   viewport height, which is stable. Applied to Tailwind's min-h-screen. */
+@supports (min-height: 100svh) {
+  .min-h-screen {
+    min-height: 100svh;
+  }
+}
+
+/* 9. Long unbroken strings (URLs, emails) shouldn't blow out the layout on
+   narrow screens. `word-break: break-word` is deprecated and behaves
+   inconsistently across browsers — `overflow-wrap` is the correct property. */
 @media (max-width: 640px) {
-  * {
+  body {
     overflow-wrap: break-word;
-    word-break: break-word;
+  }
+}
+
+/* 10. Respect users who prefer reduced motion (also stops animation-driven
+    layout differences on lower-powered Windows machines). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
