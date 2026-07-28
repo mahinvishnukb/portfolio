@@ -36,25 +36,34 @@ function AchievementCard({ item, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.12 }}
-      className="h-[130px] cursor-pointer [perspective:1000px] sm:h-[140px] md:h-[150px]"
+      className={`flip-card h-[130px] cursor-pointer sm:h-[140px] md:h-[150px] ${flipped ? "is-flipped" : ""}`}
       onClick={() => setFlipped((f) => !f)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setFlipped((f) => !f);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`${item.title} — reveal details`}
     >
-      <div
-        className={`relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""} hover:[transform:rotateY(180deg)]`}
-      >
-        <div className="absolute inset-0 rounded-3xl border border-zinc-800 bg-zinc-950 p-5 [backface-visibility:hidden] transition duration-300 md:p-6">
+      <div className="flip-inner rounded-3xl">
+        <div className="flip-face rounded-3xl border border-zinc-800 bg-zinc-950 p-5 md:p-6">
           <div className="mb-3 h-1 w-14 rounded-full bg-yellow-400" />
 
           <h3 className="text-base font-bold text-yellow-400 sm:text-xl md:text-2xl">
             {item.title}
           </h3>
 
-          <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
-            Tap to read more
+          <p className="mt-2 flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+            <span aria-hidden="true">↻</span>
+            <span className="flip-hint-hover">Hover to read more</span>
+            <span className="flip-hint-tap">Tap to read more</span>
           </p>
         </div>
 
-        <div className="absolute inset-0 rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-6">
+        <div className="flip-face flip-face-back rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 md:p-6">
           <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6">
             {item.description}
           </p>

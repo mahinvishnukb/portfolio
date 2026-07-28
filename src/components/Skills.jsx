@@ -68,13 +68,20 @@ function SkillCard({ skill }) {
 
   return (
     <div
-      className="h-44 cursor-pointer [perspective:1000px] sm:h-52"
+      className={`flip-card h-44 cursor-pointer sm:h-52 ${flipped ? "is-flipped" : ""}`}
       onClick={() => setFlipped((f) => !f)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setFlipped((f) => !f);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`${skill.name} — reveal details`}
     >
-      <div
-        className={`relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""} hover:[transform:rotateY(180deg)]`}
-      >
-        <div className="absolute inset-0 flex flex-col items-center justify-center rounded-3xl border border-zinc-800 bg-zinc-950 p-5 text-center shadow-2xl [backface-visibility:hidden]">
+      <div className="flip-inner rounded-3xl">
+        <div className="flip-face flex flex-col items-center justify-center rounded-3xl border border-zinc-800 bg-zinc-950 p-5 text-center shadow-2xl">
           <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-yellow-400/25 bg-yellow-400/10 text-lg font-black text-yellow-300 sm:mb-4 sm:h-16 sm:w-16 sm:text-2xl">
             {skill.logo}
           </div>
@@ -83,12 +90,14 @@ function SkillCard({ skill }) {
             {skill.name}
           </h3>
 
-          <p className="mt-1.5 text-[9px] uppercase tracking-[0.18em] text-zinc-600">
-            Tap to learn
+          <p className="mt-1.5 flex items-center gap-1.5 text-[9px] uppercase tracking-[0.18em] text-zinc-600">
+            <span aria-hidden="true">↻</span>
+            <span className="flip-hint-hover">Hover to learn</span>
+            <span className="flip-hint-tap">Tap to learn</span>
           </p>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 text-center shadow-[0_0_45px_rgba(250,204,21,0.16)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <div className="flip-face flip-face-back flex items-center justify-center rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 text-center shadow-[0_0_45px_rgba(250,204,21,0.16)]">
           <p className="text-sm font-semibold leading-6 text-zinc-200 sm:text-base sm:leading-7">
             {skill.meaning}
           </p>

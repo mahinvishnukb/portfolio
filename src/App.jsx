@@ -65,13 +65,20 @@ function ProjectCard({ project, index }) {
       whileInView={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, amount: 0.45, margin: "-60px 0px -60px 0px" }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="h-[200px] cursor-pointer [perspective:1000px] sm:h-[190px] md:h-[200px]"
+      className={`flip-card h-[200px] cursor-pointer sm:h-[190px] md:h-[200px] ${flipped ? "is-flipped" : ""}`}
       onClick={() => setFlipped((f) => !f)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setFlipped((f) => !f);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`${project.title} — reveal details`}
     >
-      <div
-        className={`relative h-full w-full rounded-3xl transition-transform duration-700 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""} hover:[transform:rotateY(180deg)]`}
-      >
-        <div className="absolute inset-0 flex flex-col justify-center rounded-3xl border border-zinc-800 bg-black/95 p-5 backdrop-blur-sm [backface-visibility:hidden] transition duration-500 sm:p-6">
+      <div className="flip-inner rounded-3xl">
+        <div className="flip-face flex flex-col justify-center rounded-3xl border border-zinc-800 bg-black/95 p-5 sm:p-6">
           <p className="mb-3 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
             {project.type}
           </p>
@@ -80,12 +87,14 @@ function ProjectCard({ project, index }) {
             {project.title}
           </h3>
 
-          <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
-            Tap to read more
+          <p className="mt-4 flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+            <span aria-hidden="true">↻</span>
+            <span className="flip-hint-hover">Hover to read more</span>
+            <span className="flip-hint-tap">Tap to read more</span>
           </p>
         </div>
 
-        <div className="absolute inset-0 rounded-3xl border border-red-400/60 bg-black/95 p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col">
+        <div className="flip-face flip-face-back flex flex-col rounded-3xl border border-red-400/60 bg-black/95 p-5">
           <p className="mb-2 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
             {project.type}
           </p>
