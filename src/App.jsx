@@ -21,6 +21,15 @@ const projects = [
     github: "https://github.com/mahinvishnukb/enterprise-genai-ops-assistant",
   },
   {
+    title: "CloudScale FleetOps",
+    type: "Featured Cloud / Full-Stack Project",
+    description:
+      "A maritime fleet operations platform built on .NET 8 Clean Architecture with an Angular 22 front end — real-time IoT vessel telemetry over SignalR and event-driven cargo manifest processing on AWS Lambda. Provisioned with Terraform, containerised for Kubernetes, and covered by 186 automated tests.",
+    tech: [".NET 8", "Angular 22", "PostgreSQL", "AWS Lambda", "Kubernetes", "Terraform", "SignalR", "Docker"],
+    link: "https://cloudscale-fleetops.vercel.app",
+    github: "https://github.com/mahinvishnukb/cloudscale-fleetops",
+  },
+  {
     title: "Maritime Operations & Crew Analytics Platform",
     type: "Featured Analytics Project",
     description:
