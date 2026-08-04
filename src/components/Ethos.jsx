@@ -86,22 +86,6 @@ function Ethos() {
           ))}
         </div>
 
-        <motion.figure
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          className="mt-12 border-l-2 border-yellow-400/60 pl-5 sm:mt-16 sm:pl-7 md:mt-20"
-        >
-          <blockquote className="max-w-3xl text-base font-medium leading-[1.7] text-zinc-200 sm:text-lg sm:leading-[1.65] md:text-xl">
-            &ldquo;Don&rsquo;t read success stories, you will only get a message.
-            Read failure stories, you will get some ideas to get success.&rdquo;
-          </blockquote>
-
-          <figcaption className="mt-3 text-[10px] uppercase tracking-[0.22em] text-zinc-500 sm:text-xs">
-            — Dr. A.P.J. Abdul Kalam
-          </figcaption>
-        </motion.figure>
       </div>
     </section>
   );

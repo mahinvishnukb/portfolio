@@ -44,11 +44,18 @@ const Hero = () => {
         <div className="w-full max-w-[92vw] pt-16 sm:max-w-3xl sm:pt-20 md:pt-0">
 
           <div className="space-y-2">
-            <p className="max-w-3xl text-[1.35rem] font-medium leading-[1.5] text-yellow-400 sm:text-[2rem] sm:leading-[1.35] md:text-[2.4rem]">
-              I finish what I start.
-              <br className="hidden sm:block" />{" "}
-              <span className="text-white">Every project here is proof.</span>
+            <p className="max-w-3xl text-[1.15rem] font-medium leading-[1.6] text-yellow-400 sm:text-[1.6rem] sm:leading-[1.5] md:text-[1.95rem]">
+              &ldquo;Don&rsquo;t read success stories, you will only get a message.{" "}
+              <span className="text-white">
+                Read failure stories, you will get some ideas to get success.&rdquo;
+              </span>
             </p>
+
+            <div className="flex max-w-3xl justify-end">
+              <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
+                — Dr. A.P.J. Abdul Kalam
+              </p>
+            </div>
           </div>
 
           <div className="my-8 h-1 w-20 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.6)] sm:my-10 sm:w-24" />
