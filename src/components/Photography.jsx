@@ -128,7 +128,7 @@ const Photography = () => {
           </p>
 
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-            My cousin handed me a Nikon D5200 back in his college days &mdash; it&rsquo;s been in my hands since the tenth grade, and it&rsquo;s still the camera I shoot on. I keep every frame, because a photograph does something no memory can: open one and it teleports you. Not remembering the moment. Standing in it again.
+            I&rsquo;ve shot on the same Nikon D5200 since school &mdash; more than a decade with one camera. It has made me a patient observer, and that carries directly into how I work: noticing the detail everyone walks past is usually where the interesting problem is.
           </p>
         </motion.div>
 

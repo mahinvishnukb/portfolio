@@ -3,33 +3,33 @@ import { motion } from "framer-motion";
 const principles = [
   {
     no: "01",
-    title: "Pressure goes somewhere",
-    body: "When something weighs on me, I don't sit in it — I put it into work. Most of what I've built started as a bad week I decided to convert into something that would outlast it.",
+    title: "Ownership is a commitment",
+    body: "When someone hands me a piece of work, I treat it as a promise — whether or not it was framed that way. Deadlines, handovers, follow-through: I don't need to be chased for them.",
   },
   {
     no: "02",
-    title: "Everything has a reason under it",
-    body: "The world isn't doing random things to you. There's usually logic beneath the parts that don't go your way. Finding it doesn't remove the difficulty, but it gives you somewhere to stand.",
+    title: "Find the reason underneath",
+    body: "Most problems have logic under them. Before I patch a symptom I want to understand why it happened — it's the difference between a fix that holds and one that comes back next week.",
   },
   {
     no: "03",
-    title: "A word given is a word kept",
-    body: "When someone trusts you, that trust is a promise — even when nobody said it out loud. I don't break those. It's the single rule I hold hardest.",
+    title: "Delivery is the only outcome",
+    body: "I learned this on construction sites before I learned it in software. Conditions change, scope shifts, something always goes wrong — a project still has to ship. Finishing is the job.",
   },
   {
     no: "04",
-    title: "Clean surface, clear head",
-    body: "I don't like mess — real or digital. Clutter is just work arriving late. If something stops being useful, I let it go, and the thinking gets easier.",
+    title: "Clarity over clutter",
+    body: "Clean repositories, clean data, clean structure. Mess is just work arriving late. I'd rather spend an hour organizing something than lose a week navigating it.",
   },
   {
     no: "05",
-    title: "Take the advice, then make your own call",
-    body: "Experienced people can only guide you from their own road — their timing, their circumstances. Collect the opinions, then decide what actually suits you. If you're going to lose, lose on your own call.",
+    title: "Gather input, then decide",
+    body: "I ask experienced people for their view, and I weigh it seriously — but advice is always shaped by someone else's circumstances. I make the call and I stand behind it.",
   },
   {
     no: "06",
-    title: "The hard part is the price of the good part",
-    body: "The most difficult stretch I've been through is also the one I look back on most warmly. Struggle is what makes the memory worth keeping. If nothing's competing, the goal was never worth much.",
+    title: "Choose the harder problem",
+    body: "Work without real difficulty rarely produces anything worth showing. I'd rather take on the problem with genuine constraints and earn the result.",
   },
 ];
 
@@ -76,7 +76,7 @@ function Ethos() {
           </h2>
 
           <p className="mt-3 max-w-2xl text-xs leading-6 text-zinc-400 sm:text-sm sm:leading-7">
-            A résumé shows what I&rsquo;ve done. These are the things underneath it &mdash; the rules I actually operate by, learned the slow way.
+            A résumé lists what I&rsquo;ve delivered. These are the working principles behind it &mdash; how I approach a problem, a team, and a deadline.
           </p>
         </div>
 
@@ -86,20 +86,6 @@ function Ethos() {
           ))}
         </div>
 
-        <motion.blockquote
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="mx-auto mt-12 max-w-3xl border-l-2 border-yellow-400/60 pl-5 sm:mt-16 sm:pl-6"
-        >
-          <p className="text-base font-medium leading-relaxed text-zinc-200 sm:text-xl sm:leading-relaxed">
-            &ldquo;The road doesn&rsquo;t end &mdash; but neither do you.&rdquo;
-          </p>
-          <footer className="mt-2 text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
-            — Mahin
-          </footer>
-        </motion.blockquote>
       </div>
     </section>
   );

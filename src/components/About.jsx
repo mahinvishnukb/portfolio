@@ -10,22 +10,22 @@ const About = () => {
         </p>
 
         <h2 className="max-w-4xl text-2xl font-black leading-tight sm:text-4xl md:text-6xl">
-          A Builder, A Watcher,
-          <span className="text-yellow-400"> A Guy With A Camera</span>
+          Computer Science,
+          <span className="text-yellow-400"> Learned by Building</span>
         </h2>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-10">
           <div>
             <p className="text-sm leading-6 text-zinc-300 sm:text-base sm:leading-7 md:text-lg">
-              I picked computer science as a teenager in Coimbatore and never stopped picking it. Not because I was the top of the class &mdash; I wasn&rsquo;t &mdash; but because every time I went deeper, it opened up bigger. That pull is still what gets me to the desk.
+              I chose computer science early and have stayed with it for one reason: every layer I go down opens up another. That curiosity is what moved me from engineering in Tamil Nadu to a Master of Applied Computer Science at St. Francis Xavier University, and it&rsquo;s what still decides what I build next.
             </p>
 
             <p className="mt-4 text-sm leading-6 text-zinc-300 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
-              Some of what I know didn&rsquo;t come from a classroom. I grew up around my father&rsquo;s construction business, and working alongside him taught me the things a syllabus can&rsquo;t: patience, how to read people, how to keep a promise to a client, and how to finish what you started even when conditions fall apart.
+              Some of my most useful training happened outside a classroom. I worked alongside my father in his construction business &mdash; managing schedules, crews, and client relationships, and delivering projects on time through conditions nobody planned for. It taught me how real delivery works: the constraints are never theoretical, and finishing is the only outcome that counts.
             </p>
 
             <p className="mt-4 text-sm leading-6 text-zinc-300 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
-              Now I&rsquo;m in Canada with a master&rsquo;s in Applied Computer Science, building things that solve real problems &mdash; and, in between, watching the world through a camera I&rsquo;ve had since the tenth grade.
+              Today I build software and data systems that solve concrete problems &mdash; automation, analytics, and applied AI &mdash; and I photograph the world in whatever time is left over.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ const About = () => {
               </p>
 
               <p className="mt-3 text-sm leading-6 text-zinc-500">
-                Shooting on the same Nikon D5200 since tenth grade. I see the world in frames.
+                Shooting on the same Nikon D5200 since school &mdash; over a decade behind one camera.
               </p>
             </div>
           </div>

@@ -45,22 +45,16 @@ const Hero = () => {
 
           <div className="space-y-2">
             <p className="max-w-3xl text-[1.35rem] font-medium leading-[1.5] text-yellow-400 sm:text-[2rem] sm:leading-[1.35] md:text-[2.4rem]">
-              I don&rsquo;t sit in the hard parts.
+              I finish what I start.
               <br className="hidden sm:block" />{" "}
-              <span className="text-white">I build something out of them.</span>
+              <span className="text-white">Every project here is proof.</span>
             </p>
-
-            <div className="flex max-w-3xl justify-end">
-              <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
-                — Mahin
-              </p>
-            </div>
           </div>
 
           <div className="my-8 h-1 w-20 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.6)] sm:my-10 sm:w-24" />
 
           <p className="max-w-[92vw] text-base leading-7 text-zinc-200 sm:max-w-xl sm:text-lg sm:leading-8 md:text-xl">
-            Computer science graduate, photographer, and a chronic over-thinker about how things work. I turn pressure into projects.
+            Applied Computer Science graduate building practical software and data systems &mdash; from multi-agent AI platforms to analytics pipelines that turn raw operational data into decisions.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-5">
