@@ -43,36 +43,24 @@ const Hero = () => {
       >
         <div className="w-full max-w-[92vw] pt-16 sm:max-w-3xl sm:pt-20 md:pt-0">
 
-          <div className="space-y-1">
-            <div className="space-y-1">
-              <p className="max-w-3xl text-[1.05rem] font-medium leading-[1.8] text-yellow-400 sm:text-[1.7rem] md:text-[2.1rem]">
-                தெய்வத்தான் ஆகா தெனினும் முயற்சிதன் மெய்வருத்தக் கூலி தரும்.
+          <div className="space-y-2">
+            <p className="max-w-3xl text-[1.35rem] font-medium leading-[1.5] text-yellow-400 sm:text-[2rem] sm:leading-[1.35] md:text-[2.4rem]">
+              I don&rsquo;t sit in the hard parts.
+              <br className="hidden sm:block" />{" "}
+              <span className="text-white">I build something out of them.</span>
+            </p>
+
+            <div className="flex max-w-3xl justify-end">
+              <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
+                — Mahin
               </p>
-
-              <div className="flex justify-end max-w-3xl">
-                <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
-                  திருவள்ளுவர் · குறள் 619
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <p className="max-w-3xl text-[1rem] leading-[1.9] text-zinc-200 sm:text-[1.2rem] md:text-[1.35rem]">
-                Even if god has given up, perseverance will pay the wages for one's efforts.
-              </p>
-
-              <div className="flex justify-end max-w-3xl">
-                <p className="text-xs tracking-[0.22em] text-zinc-500 sm:text-sm">
-                  — Thiruvalluvar · Kural 619
-                </p>
-              </div>
             </div>
           </div>
 
           <div className="my-8 h-1 w-20 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.6)] sm:my-10 sm:w-24" />
 
           <p className="max-w-[92vw] text-base leading-7 text-zinc-200 sm:max-w-xl sm:text-lg sm:leading-8 md:text-xl">
-            Building practical projects while continuously learning and improving through experience.
+            Computer science graduate, photographer, and a chronic over-thinker about how things work. I turn pressure into projects.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-5">

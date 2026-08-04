@@ -126,6 +126,10 @@ const Photography = () => {
             quiet wildlife frame, a natural portrait, or a moment from travel, I
             enjoy capturing the small details that make a scene feel alive.
           </p>
+
+          <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
+            My cousin handed me a Nikon D5200 back in his college days &mdash; it&rsquo;s been in my hands since the tenth grade, and it&rsquo;s still the camera I shoot on. I keep every frame, because a photograph does something no memory can: open one and it teleports you. Not remembering the moment. Standing in it again.
+          </p>
         </motion.div>
 
         <motion.div

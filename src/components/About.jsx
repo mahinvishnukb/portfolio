@@ -10,18 +10,22 @@ const About = () => {
         </p>
 
         <h2 className="max-w-4xl text-2xl font-black leading-tight sm:text-4xl md:text-6xl">
-          Computer Science,
-          <span className="text-yellow-400"> Technology & Learning</span>
+          A Builder, A Watcher,
+          <span className="text-yellow-400"> A Guy With A Camera</span>
         </h2>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-10">
           <div>
             <p className="text-sm leading-6 text-zinc-300 sm:text-base sm:leading-7 md:text-lg">
-              I recently completed my Master of Applied Computer Science at St. Francis Xavier University. I enjoy building practical projects, solving real-world problems, and continuously learning through hands-on experience in analytics, software development, and technology.
+              I picked computer science as a teenager in Coimbatore and never stopped picking it. Not because I was the top of the class &mdash; I wasn&rsquo;t &mdash; but because every time I went deeper, it opened up bigger. That pull is still what gets me to the desk.
             </p>
 
             <p className="mt-4 text-sm leading-6 text-zinc-300 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
-              Outside academics, I have been involved in student leadership, campus activities, photography, and collaborative projects. I enjoy working with people, taking responsibility, and continuously improving through experience.
+              Some of what I know didn&rsquo;t come from a classroom. I grew up around my father&rsquo;s construction business, and working alongside him taught me the things a syllabus can&rsquo;t: patience, how to read people, how to keep a promise to a client, and how to finish what you started even when conditions fall apart.
+            </p>
+
+            <p className="mt-4 text-sm leading-6 text-zinc-300 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
+              Now I&rsquo;m in Canada with a master&rsquo;s in Applied Computer Science, building things that solve real problems &mdash; and, in between, watching the world through a camera I&rsquo;ve had since the tenth grade.
             </p>
           </div>
 
@@ -66,6 +70,10 @@ const About = () => {
 
               <p className="mt-3 text-zinc-300">
                 Photography • Student Leadership • Team Coordination • Travel • Wildlife
+              </p>
+
+              <p className="mt-3 text-sm leading-6 text-zinc-500">
+                Shooting on the same Nikon D5200 since tenth grade. I see the world in frames.
               </p>
             </div>
           </div>

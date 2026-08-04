@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Photography from "./components/Photography";
 import Achievements from "./components/Achievements";
 import Experience from "./components/Experience";
+import Ethos from "./components/Ethos";
 
 const projects = [
   {
@@ -177,6 +178,7 @@ function App() {
       <Achievements />
       <ProjectsSection />
       <Experience />
+      <Ethos />
       <Skills />
       <Photography />
       <Contact />
