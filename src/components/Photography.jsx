@@ -100,23 +100,23 @@ const Photography = () => {
   return (
     <section
       id="photography"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-14 text-white md:px-12 md:py-20"
+      className="relative flex items-center overflow-hidden bg-black px-6 py-16 text-white md:px-12 md:py-20"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.10),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10">
         <motion.div
-          initial={{ opacity: 0, x: 45 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="order-2 w-full max-w-2xl lg:order-2"
         >
           <p className="mb-3 text-xs uppercase tracking-[0.28em] text-yellow-400 sm:text-sm sm:tracking-[0.35em]">
             Photography
           </p>
 
-          <h2 className="text-2xl font-black leading-tight sm:text-5xl md:text-6xl">
+          <h2 className="text-2xl font-black leading-tight sm:text-4xl md:text-5xl">
             Stories I Notice
             <span className="text-yellow-400"> Through My Lens</span>
           </h2>
@@ -133,11 +133,11 @@ const Photography = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, x: -45 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="order-1 relative h-[420px] overflow-hidden rounded-[1.7rem] border border-white/10 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:h-[520px] sm:rounded-[2rem] md:h-[590px] lg:order-1 lg:h-[620px]"
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="order-1 relative h-[340px] overflow-hidden rounded-[1.7rem] border border-white/10 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.5)] sm:h-[430px] sm:rounded-[2rem] md:h-[500px] lg:order-1 lg:h-[520px]"
         >
           <AnimatePresence mode="wait">
             <motion.img

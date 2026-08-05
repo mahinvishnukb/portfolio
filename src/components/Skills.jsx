@@ -61,47 +61,21 @@ const skills = [
   },
 ];
 
-import { useState } from "react";
-
 function SkillCard({ skill }) {
-  const [flipped, setFlipped] = useState(false);
-
   return (
-    <div
-      className={`flip-card h-44 cursor-pointer sm:h-52 ${flipped ? "is-flipped" : ""}`}
-      onClick={() => setFlipped((f) => !f)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setFlipped((f) => !f);
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-label={`${skill.name} — reveal details`}
-    >
-      <div className="flip-inner rounded-3xl">
-        <div className="flip-face flex flex-col items-center justify-center rounded-3xl border border-zinc-800 bg-zinc-950 p-5 text-center shadow-2xl">
-          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-yellow-400/25 bg-yellow-400/10 text-lg font-black text-yellow-300 sm:mb-4 sm:h-16 sm:w-16 sm:text-2xl">
-            {skill.logo}
-          </div>
+    <div className="flex h-full items-start gap-3 rounded-2xl border border-zinc-800 bg-zinc-950 p-4 transition duration-300 hover:border-yellow-400/40 sm:gap-4 sm:p-5">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-yellow-400/25 bg-yellow-400/10 text-sm font-black text-yellow-300 sm:h-12 sm:w-12 sm:text-base">
+        {skill.logo}
+      </div>
 
-          <h3 className="text-base font-black text-white sm:text-xl">
-            {skill.name}
-          </h3>
+      <div className="min-w-0">
+        <h3 className="text-sm font-black leading-tight text-white sm:text-base">
+          {skill.name}
+        </h3>
 
-          <p className="mt-1.5 flex items-center gap-1.5 text-[9px] uppercase tracking-[0.18em] text-zinc-600">
-            <span aria-hidden="true">↻</span>
-            <span className="flip-hint-hover">Hover to learn</span>
-            <span className="flip-hint-tap">Tap to learn</span>
-          </p>
-        </div>
-
-        <div className="flip-face flip-face-back flex items-center justify-center rounded-3xl border border-yellow-400/50 bg-zinc-950 p-5 text-center shadow-[0_0_45px_rgba(250,204,21,0.16)]">
-          <p className="text-sm font-semibold leading-6 text-zinc-200 sm:text-base sm:leading-7">
-            {skill.meaning}
-          </p>
-        </div>
+        <p className="mt-1 text-xs leading-5 text-zinc-400 sm:text-sm sm:leading-6">
+          {skill.meaning}
+        </p>
       </div>
     </div>
   );
@@ -111,28 +85,28 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-black px-6 py-16 text-white md:px-12 md:py-28"
+      className="relative overflow-hidden bg-black px-6 py-16 text-white md:px-12 md:py-20"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.10),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="mb-10 max-w-3xl md:mb-16">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-yellow-400">
+        <div className="mb-8 max-w-3xl md:mb-10">
+          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-yellow-400 sm:text-sm">
             Skills
           </p>
 
-          <h2 className="text-2xl font-black sm:text-4xl md:text-6xl">
+          <h2 className="text-2xl font-black leading-tight sm:text-4xl md:text-5xl">
             Skills Behind
             <span className="text-yellow-400"> My Work</span>
           </h2>
 
-          <p className="mt-4 text-sm leading-7 text-zinc-400 sm:mt-6 sm:text-lg sm:leading-8">
+          <p className="mt-3 text-xs leading-6 text-zinc-400 sm:text-sm sm:leading-7">
             A focused mix of technical, analytical, and creative skills that
             support the way I build projects and present ideas clearly.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-4">
+        <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {skills.map((skill) => (
             <SkillCard key={skill.name} skill={skill} />
           ))}

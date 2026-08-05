@@ -23,8 +23,8 @@ function PrincipleCard({ item, index }) {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, delay: Math.min(index, 3) * 0.05, ease: [0.16, 1, 0.3, 1] }}
       className="group relative rounded-2xl border border-zinc-800 bg-zinc-950/70 p-5 transition duration-300 hover:border-yellow-400/40 hover:shadow-[0_0_35px_rgba(250,204,21,0.06)] sm:p-6"
     >
       <span className="text-[11px] font-black tracking-[0.25em] text-yellow-400/70">

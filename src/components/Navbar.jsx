@@ -16,28 +16,39 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
         <a
           href="#"
-          className="max-w-[190px] text-xl font-black leading-tight text-white sm:max-w-none md:text-2xl"
+          className="max-w-[190px] shrink-0 text-xl font-black leading-tight text-white sm:max-w-none lg:text-xl xl:text-2xl"
         >
           Mahin Vishnu K B
         </a>
 
-        <ul className="hidden items-center gap-8 text-base font-medium text-white md:flex">
+        <ul className="hidden items-center gap-5 text-sm font-medium text-white lg:flex lg:gap-6 xl:gap-8 xl:text-base">
           {links.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="transition duration-300 hover:text-yellow-400"
+                className="whitespace-nowrap transition duration-300 hover:text-yellow-400"
               >
                 {link.name}
               </a>
             </li>
           ))}
+
+          <li>
+            <a
+              href="/Mahin-Vishnu-KB-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="whitespace-nowrap rounded-full border border-yellow-400/60 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black lg:px-4 lg:text-sm"
+            >
+              Résumé ↓
+            </a>
+          </li>
         </ul>
 
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-yellow-400/30 text-3xl font-black text-yellow-400 transition hover:bg-yellow-400 hover:text-black md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-yellow-400/30 text-3xl font-black text-yellow-400 transition hover:bg-yellow-400 hover:text-black lg:hidden"
           aria-label="Toggle menu"
         >
           {open ? "×" : "☰"}
@@ -45,7 +56,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="border-t border-slate-800 bg-black/95 px-6 py-6 md:hidden">
+        <div className="border-t border-slate-800 bg-black/95 px-6 py-6 lg:hidden">
           <div className="flex flex-col gap-5">
             {links.map((link) => (
               <a
@@ -57,6 +68,16 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+
+            <a
+              href="/Mahin-Vishnu-KB-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-1 inline-flex w-fit items-center rounded-full border border-yellow-400/60 px-4 py-2 text-base font-bold uppercase tracking-wide text-yellow-400 transition hover:bg-yellow-400 hover:text-black"
+            >
+              Résumé ↓
+            </a>
           </div>
         </div>
       )}

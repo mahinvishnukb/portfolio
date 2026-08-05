@@ -35,7 +35,7 @@ function AchievementCard({ item, index }) {
       initial={{ opacity: 0, y: 35 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.12 }}
+      transition={{ duration: 0.6, delay: Math.min(index, 3) * 0.05 }}
       className={`flip-card h-[130px] cursor-pointer sm:h-[140px] md:h-[150px] ${flipped ? "is-flipped" : ""}`}
       onClick={() => setFlipped((f) => !f)}
       onKeyDown={(e) => {
@@ -108,10 +108,10 @@ function Achievements() {
 
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="relative h-[260px] overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-950 shadow-[0_0_80px_rgba(0,0,0,0.45)] sm:h-[340px] md:h-[420px] lg:h-[455px]"
           >
             <AnimatePresence mode="sync">

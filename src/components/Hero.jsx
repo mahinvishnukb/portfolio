@@ -38,7 +38,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.6 }}
         className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-24 sm:px-6 md:px-10 md:py-28"
       >
         <div className="w-full max-w-[92vw] pt-16 sm:max-w-3xl sm:pt-20 md:pt-0">
@@ -64,10 +64,10 @@ const Hero = () => {
             Applied Computer Science graduate building practical software and data systems &mdash; from multi-agent AI platforms to analytics pipelines that turn raw operational data into decisions.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-5">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
             <a
               href="#projects"
-              className="flex items-center justify-center rounded-full bg-yellow-400 px-8 py-4 text-center text-sm font-black uppercase tracking-wide text-black shadow-[0_0_30px_rgba(250,204,21,0.25)] transition duration-300 hover:scale-105 hover:bg-yellow-300"
+              className="flex min-h-[52px] flex-1 items-center justify-center whitespace-nowrap rounded-full bg-yellow-400 px-6 py-3.5 text-center text-xs font-black uppercase tracking-wide text-black shadow-[0_0_30px_rgba(250,204,21,0.25)] transition duration-300 hover:bg-yellow-300 sm:flex-none sm:px-7 sm:text-sm"
             >
               View My Work →
             </a>
@@ -76,14 +76,14 @@ const Hero = () => {
               href="/Mahin-Vishnu-KB-Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center rounded-full border border-yellow-400 px-8 py-4 text-center text-sm font-black uppercase tracking-wide text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+              className="flex min-h-[52px] flex-1 items-center justify-center whitespace-nowrap rounded-full border border-yellow-400 px-6 py-3.5 text-center text-xs font-black uppercase tracking-wide text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black sm:flex-none sm:px-7 sm:text-sm"
             >
               Download Résumé ↓
             </a>
 
             <a
               href="#contact"
-              className="flex items-center justify-center rounded-full border border-zinc-700 px-8 py-4 text-center text-sm font-black uppercase tracking-wide text-zinc-300 transition duration-300 hover:border-zinc-500 hover:text-white"
+              className="flex min-h-[52px] flex-1 items-center justify-center whitespace-nowrap rounded-full border border-zinc-700 px-6 py-3.5 text-center text-xs font-black uppercase tracking-wide text-zinc-300 transition duration-300 hover:border-zinc-500 hover:text-white sm:flex-none sm:px-7 sm:text-sm"
             >
               Contact Me
             </a>
@@ -98,7 +98,7 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" />
               </svg>
               <span className="text-xl font-black text-yellow-400 sm:text-4xl">7</span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Projects Shipped</span>
+              <span className="mt-1 flex min-h-[2.1em] items-start justify-center text-center text-[9px] font-medium uppercase leading-tight tracking-wide text-zinc-400 sm:text-xs">Projects Shipped</span>
             </div>
 
             <div className="flex flex-col items-center border-r border-white/10 px-2 text-center">
@@ -106,7 +106,7 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5v13.5H3.75V5.25Zm4.5 3h7.5m-7.5 3h7.5m-7.5 3h4.5" />
               </svg>
               <span className="text-xl font-black text-yellow-400 sm:text-4xl">2</span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Yrs Engineering</span>
+              <span className="mt-1 flex min-h-[2.1em] items-start justify-center text-center text-[9px] font-medium uppercase leading-tight tracking-wide text-zinc-400 sm:text-xs">Yrs Engineering</span>
             </div>
 
             <div className="flex flex-col items-center px-2 text-center">
@@ -114,7 +114,7 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 2.25 2.25L15 9.75m6 2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
               </svg>
               <span className="text-xl font-black text-yellow-400 sm:text-4xl">3</span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Leadership Roles</span>
+              <span className="mt-1 flex min-h-[2.1em] items-start justify-center text-center text-[9px] font-medium uppercase leading-tight tracking-wide text-zinc-400 sm:text-xs">Leadership Roles</span>
             </div>
           </div>
         </div>
