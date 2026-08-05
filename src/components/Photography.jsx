@@ -102,7 +102,7 @@ const Photography = () => {
       id="photography"
       className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-14 text-white md:px-12 md:py-20"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.12),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.10),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10">
         <motion.div
@@ -112,13 +112,13 @@ const Photography = () => {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="order-2 w-full max-w-2xl lg:order-2"
         >
-          <p className="mb-3 text-xs uppercase tracking-[0.28em] text-teal-300 sm:text-sm sm:tracking-[0.35em]">
+          <p className="mb-3 text-xs uppercase tracking-[0.28em] text-yellow-400 sm:text-sm sm:tracking-[0.35em]">
             Photography
           </p>
 
           <h2 className="text-2xl font-black leading-tight sm:text-5xl md:text-6xl">
             Stories I Notice
-            <span className="text-amber-300"> Through My Lens</span>
+            <span className="text-yellow-400"> Through My Lens</span>
           </h2>
 
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:mt-6 sm:text-base sm:leading-8">

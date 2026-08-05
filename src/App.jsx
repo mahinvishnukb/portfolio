@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Photography from "./components/Photography";
-import Achievements from "./components/Achievements";
 import Experience from "./components/Experience";
 import Ethos from "./components/Ethos";
 
@@ -67,82 +65,62 @@ const projects = [
 ];
 
 function ProjectCard({ project, index }) {
-  const [flipped, setFlipped] = useState(false);
-
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.85, y: 50, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.45, margin: "-60px 0px -60px 0px" }}
-      transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className={`flip-card h-[200px] cursor-pointer sm:h-[190px] md:h-[200px] ${flipped ? "is-flipped" : ""}`}
-      onClick={() => setFlipped((f) => !f)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setFlipped((f) => !f);
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-label={`${project.title} — reveal details`}
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.6, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
+      className="flex h-full flex-col rounded-3xl border border-zinc-800 bg-black/95 p-5 transition duration-300 hover:-translate-y-1 hover:border-yellow-400/50 hover:shadow-[0_0_35px_rgba(250,204,21,0.07)] sm:p-6"
     >
-      <div className="flip-inner rounded-3xl">
-        <div className="flip-face flex flex-col justify-center rounded-3xl border border-zinc-800 bg-black/95 p-5 sm:p-6">
-          <p className="mb-3 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
-            {project.type}
-          </p>
+      <p className="text-[10px] uppercase tracking-[0.22em] text-yellow-400 sm:text-xs sm:tracking-[0.28em]">
+        {project.type}
+      </p>
 
-          <h3 className="text-base font-black leading-tight text-white sm:text-lg md:text-xl">
-            {project.title}
-          </h3>
+      <h3 className="mt-2 text-base font-black leading-tight text-white sm:text-lg md:text-xl">
+        {project.title}
+      </h3>
 
-          <p className="mt-4 flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
-            <span aria-hidden="true">↻</span>
-            <span className="flip-hint-hover">Hover to read more</span>
-            <span className="flip-hint-tap">Tap to read more</span>
-          </p>
-        </div>
+      <p className="mt-3 flex-1 text-xs leading-6 text-zinc-400 sm:text-sm sm:leading-6">
+        {project.description}
+      </p>
 
-        <div className="flip-face flip-face-back flex flex-col rounded-3xl border border-red-400/60 bg-black/95 p-5">
-          <p className="mb-2 text-[10px] uppercase tracking-[0.22em] text-red-400 sm:text-xs sm:tracking-[0.3em]">
-            {project.type}
-          </p>
+      <div className="mt-4 flex flex-wrap gap-1.5">
+        {project.tech.map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-yellow-400/20 bg-yellow-400/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-yellow-300"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
 
-          <p className="text-xs leading-5 text-zinc-300 sm:text-sm sm:leading-6 flex-1 overflow-hidden">
-            {project.description}
-          </p>
-
-          <div className="mt-2 flex flex-wrap gap-1">
-            {project.tech.slice(0, 5).map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-red-400/20 bg-red-400/10 px-2 py-0.5 text-[8px] font-semibold uppercase tracking-wide text-red-300"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          {(project.link || project.github) && (
-            <div className="mt-2 flex gap-2" onClick={e => e.stopPropagation()}>
-              {project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer"
-                  className="text-[9px] uppercase tracking-widest text-red-400 border border-red-400/40 rounded-full px-2 py-0.5 hover:bg-red-400/10 transition-colors">
-                  Live Demo →
-                </a>
-              )}
-              {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer"
-                  className="text-[9px] uppercase tracking-widest text-zinc-400 border border-zinc-700 rounded-full px-2 py-0.5 hover:bg-zinc-800 transition-colors">
-                  GitHub →
-                </a>
-              )}
-            </div>
+      {(project.link || project.github) && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-yellow-400/50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-yellow-400 transition-colors hover:bg-yellow-400 hover:text-black"
+            >
+              Live Demo →
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-zinc-700 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-zinc-300 transition-colors hover:bg-zinc-800"
+            >
+              GitHub →
+            </a>
           )}
         </div>
-      </div>
-    </motion.div>
+      )}
+    </motion.article>
   );
 }
 
@@ -150,17 +128,17 @@ function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative flex min-h-screen items-center overflow-hidden bg-zinc-950 px-6 py-16 text-white md:px-12 md:py-10"
+      className="relative overflow-hidden bg-zinc-950 px-6 py-16 text-white md:px-12 md:py-20"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.12),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(250,204,21,0.10),transparent_35%)]" />
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="mb-8 max-w-3xl md:mb-6">
-          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-red-400 sm:text-sm sm:tracking-[0.3em]">
+        <div className="mb-8 max-w-3xl md:mb-10">
+          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-yellow-400 sm:text-sm sm:tracking-[0.3em]">
             Projects
           </p>
 
           <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
-            Projects I Have <span className="text-red-400">Worked On</span>
+            Projects I Have <span className="text-yellow-400">Worked On</span>
           </h2>
 
           <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base">
@@ -184,7 +162,6 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Achievements />
       <ProjectsSection />
       <Experience />
       <Ethos />

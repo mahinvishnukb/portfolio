@@ -16,21 +16,6 @@ const principles = [
     title: "Delivery is the only outcome",
     body: "I learned this on construction sites before I learned it in software. Conditions change, scope shifts, something always goes wrong — a project still has to ship. Finishing is the job.",
   },
-  {
-    no: "04",
-    title: "Clarity over clutter",
-    body: "Clean repositories, clean data, clean structure. Mess is just work arriving late. I'd rather spend an hour organizing something than lose a week navigating it.",
-  },
-  {
-    no: "05",
-    title: "Gather input, then decide",
-    body: "I ask experienced people for their view, and I weigh it seriously — but advice is always shaped by someone else's circumstances. I make the call and I stand behind it.",
-  },
-  {
-    no: "06",
-    title: "Choose the harder problem",
-    body: "Work without real difficulty rarely produces anything worth showing. I'd rather take on the problem with genuine constraints and earn the result.",
-  },
 ];
 
 function PrincipleCard({ item, index }) {
@@ -80,7 +65,7 @@ function Ethos() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
           {principles.map((item, index) => (
             <PrincipleCard key={item.no} item={item} index={index} />
           ))}

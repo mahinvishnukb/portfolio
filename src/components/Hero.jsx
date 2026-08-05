@@ -73,8 +73,17 @@ const Hero = () => {
             </a>
 
             <a
-              href="#contact"
+              href="/Mahin-Vishnu-KB-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="flex items-center justify-center rounded-full border border-yellow-400 px-8 py-4 text-center text-sm font-black uppercase tracking-wide text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black"
+            >
+              Download Résumé ↓
+            </a>
+
+            <a
+              href="#contact"
+              className="flex items-center justify-center rounded-full border border-zinc-700 px-8 py-4 text-center text-sm font-black uppercase tracking-wide text-zinc-300 transition duration-300 hover:border-zinc-500 hover:text-white"
             >
               Contact Me
             </a>
@@ -88,24 +97,24 @@ const Hero = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor" className="mb-2 h-5 w-5 text-yellow-400 sm:h-8 sm:w-8">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" />
               </svg>
-              <span className="text-xl font-black text-yellow-400 sm:text-4xl">5+</span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Projects</span>
+              <span className="text-xl font-black text-yellow-400 sm:text-4xl">7</span>
+              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Projects Shipped</span>
             </div>
 
             <div className="flex flex-col items-center border-r border-white/10 px-2 text-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor" className="mb-2 h-5 w-5 text-yellow-400 sm:h-8 sm:w-8">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5v13.5H3.75V5.25Zm4.5 3h7.5m-7.5 3h7.5m-7.5 3h4.5" />
               </svg>
-              <span className="text-xl font-black text-yellow-400 sm:text-4xl">10+</span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Technologies</span>
+              <span className="text-xl font-black text-yellow-400 sm:text-4xl">2</span>
+              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Yrs Engineering</span>
             </div>
 
             <div className="flex flex-col items-center px-2 text-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor" className="mb-2 h-5 w-5 text-yellow-400 sm:h-8 sm:w-8">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 2.25 2.25L15 9.75m6 2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
               </svg>
-              <span className="text-xl font-black text-yellow-400 sm:text-4xl">3+</span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Leadership</span>
+              <span className="text-xl font-black text-yellow-400 sm:text-4xl">3</span>
+              <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-zinc-400 sm:text-xs">Leadership Roles</span>
             </div>
           </div>
         </div>

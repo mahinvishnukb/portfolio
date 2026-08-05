@@ -79,6 +79,47 @@ const Contact = () => {
                   →
                 </span>
               </a>
+
+              <a
+                href="https://github.com/mahinvishnukb"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-zinc-800 bg-black/70 p-4 transition duration-300 hover:border-yellow-400/60 hover:bg-yellow-400/10 sm:p-5"
+              >
+                <div className="min-w-0">
+                  <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
+                    GitHub
+                  </p>
+                  <p className="mt-1 truncate text-sm font-semibold text-zinc-100 sm:mt-2 sm:text-base">
+                    mahinvishnukb
+                  </p>
+                  <p className="text-xs text-zinc-500">
+                    github.com/mahinvishnukb
+                  </p>
+                </div>
+                <span className="shrink-0 text-xl text-yellow-400 transition group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+
+              <a
+                href="/Mahin-Vishnu-KB-Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-yellow-400/40 bg-yellow-400/10 p-4 transition duration-300 hover:border-yellow-400 hover:bg-yellow-400/20 sm:p-5"
+              >
+                <div className="min-w-0">
+                  <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
+                    Résumé
+                  </p>
+                  <p className="mt-1 truncate text-sm font-semibold text-zinc-100 sm:mt-2 sm:text-base">
+                    Download PDF
+                  </p>
+                </div>
+                <span className="shrink-0 text-xl text-yellow-400 transition group-hover:translate-y-0.5">
+                  ↓
+                </span>
+              </a>
             </div>
           </div>
 
