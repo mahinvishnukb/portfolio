@@ -78,7 +78,7 @@ const Hero = () => {
               rel="noreferrer"
               className="flex min-h-[52px] flex-1 items-center justify-center whitespace-nowrap rounded-full border border-yellow-400 px-6 py-3.5 text-center text-xs font-black uppercase tracking-wide text-yellow-400 transition duration-300 hover:bg-yellow-400 hover:text-black sm:flex-none sm:px-7 sm:text-sm"
             >
-              Download Résumé ↓
+              Download Resume ↓
             </a>
 
             <a

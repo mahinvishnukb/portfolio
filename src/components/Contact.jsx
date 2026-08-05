@@ -5,7 +5,7 @@ const Contact = () => {
       className="relative overflow-hidden bg-black px-6 py-16 text-white md:px-12 md:py-28"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(250,204,21,0.10),transparent_35%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.08),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(250,204,21,0.06),transparent_35%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-8 max-w-3xl md:mb-16">
@@ -110,7 +110,7 @@ const Contact = () => {
               >
                 <div className="min-w-0">
                   <p className="text-xs uppercase tracking-[0.25em] text-yellow-400">
-                    Résumé
+                    Resume
                   </p>
                   <p className="mt-1 truncate text-sm font-semibold text-zinc-100 sm:mt-2 sm:text-base">
                     Download PDF

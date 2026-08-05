@@ -61,7 +61,7 @@ function Ethos() {
           </h2>
 
           <p className="mt-3 max-w-2xl text-xs leading-6 text-zinc-400 sm:text-sm sm:leading-7">
-            A résumé lists what I&rsquo;ve delivered. These are the working principles behind it &mdash; how I approach a problem, a team, and a deadline.
+            A resume lists what I&rsquo;ve delivered. These are the working principles behind it &mdash; how I approach a problem, a team, and a deadline.
           </p>
         </div>
 
