@@ -5,13 +5,14 @@ const Hero = () => {
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
       {/* Background Image */}
       <img
-        src="/images/hero/hero-main1.png"
-        alt="Mahin Vishnu portfolio hero"
+        src="/images/hero/hero-main1.jpg"
+        alt="Mahin Vishnu K B"
+        fetchPriority="high"
+        decoding="async"
         onError={(e) => {
           const fallbackImages = [
+            "/images/hero/hero-main1.png",
             "/images/hero/hero-main.png",
-            "/images/hero/hero-main1.jpg",
-            "/images/hero/hero-main1.jpeg",
           ];
 
           const currentIndex = Number(e.currentTarget.dataset.fallbackIndex || 0);
@@ -42,6 +43,13 @@ const Hero = () => {
         className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-24 sm:px-6 md:px-10 md:py-28"
       >
         <div className="w-full max-w-[92vw] pt-16 sm:max-w-3xl sm:pt-20 md:pt-0">
+
+          {/* Every page needs exactly one h1. It's kept visually hidden so the
+              existing hero design is untouched, but Google and screen readers
+              still get a proper top-level heading. */}
+          <h1 className="sr-only">
+            Mahin Vishnu K B — Systems &amp; Software Engineer
+          </h1>
 
           <div className="space-y-2">
             <p className="max-w-3xl text-[1.15rem] font-medium leading-[1.6] text-yellow-400 sm:text-[1.6rem] sm:leading-[1.5] md:text-[1.95rem]">

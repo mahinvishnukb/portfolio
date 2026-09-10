@@ -143,7 +143,9 @@ const Photography = () => {
             <motion.img
               key={mixedPhotos[activeIndex].image}
               src={mixedPhotos[activeIndex].image}
-              alt={mixedPhotos[activeIndex].title}
+              alt={`${mixedPhotos[activeIndex].type} photograph by Mahin Vishnu K B`}
+              loading="lazy"
+              decoding="async"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
