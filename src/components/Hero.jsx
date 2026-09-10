@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="my-8 h-1 w-20 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.6)] sm:my-10 sm:w-24" />
 
           <p className="max-w-[92vw] text-base leading-7 text-zinc-200 sm:max-w-xl sm:text-lg sm:leading-8 md:text-xl">
-            Applied Computer Science graduate building practical software and data systems &mdash; from multi-agent AI platforms to analytics pipelines that turn raw operational data into decisions.
+            Applied Computer Science graduate working across systems, automation, and data &mdash; from Linux infrastructure and shell automation to multi-agent AI platforms and analytics pipelines.
           </p>
 
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">

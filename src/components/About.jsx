@@ -25,7 +25,7 @@ const About = () => {
             </p>
 
             <p className="mt-4 text-sm leading-6 text-zinc-300 sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
-              Today I build software and data systems that solve concrete problems &mdash; automation, analytics, and applied AI &mdash; and I photograph the world in whatever time is left over.
+              Today I work across systems and data &mdash; Linux infrastructure, shell automation, access control, analytics, and applied AI &mdash; and I photograph the world in whatever time is left over.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ const About = () => {
               </h3>
 
               <p className="mt-3 text-zinc-300">
-                Python • SQL • React • PostgreSQL • Machine Learning • Data Analytics
+                Python • SQL • Linux • Shell • PostgreSQL • Power BI • React • Machine Learning
               </p>
             </div>
 

@@ -20,6 +20,26 @@ const skills = [
     meaning: "Dashboards, KPIs, and visual reporting.",
   },
   {
+    name: "Linux",
+    logo: "LX",
+    meaning: "Server setup, configuration, permissions, logs, and troubleshooting.",
+  },
+  {
+    name: "Shell Scripting",
+    logo: "SH",
+    meaning: "Automating user access, scheduled tasks, and routine operations.",
+  },
+  {
+    name: "System Administration",
+    logo: "SYS",
+    meaning: "Linux and Windows servers, virtual machines, and OS patching.",
+  },
+  {
+    name: "Security & Access",
+    logo: "SEC",
+    meaning: "Role-based permissions, access controls, and network security.",
+  },
+  {
     name: "React",
     logo: "⚛",
     meaning: "Interactive and responsive web interfaces.",
