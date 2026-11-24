@@ -34,16 +34,16 @@ const A = ({ href, children }) => (
     href={href}
     target={href.startsWith("http") ? "_blank" : undefined}
     rel="noopener noreferrer"
-    className="text-amber-800 underline decoration-amber-600/35 underline-offset-[3px] transition-colors hover:decoration-amber-700"
+    className="text-amber-400 underline decoration-amber-400/30 underline-offset-[3px] transition-colors hover:decoration-amber-400"
   >
     {children}
   </a>
 );
 
 const H = ({ children }) => (
-  <h2 className="mb-5 flex items-center gap-3 font-serif text-sm uppercase tracking-[0.18em] text-amber-800/80">
+  <h2 className="mb-5 flex items-center gap-3 font-serif text-sm uppercase tracking-[0.18em] text-amber-400/80">
     {children}
-    <span className="h-px flex-1 bg-amber-900/10" />
+    <span className="h-px flex-1 bg-amber-400/15" />
   </h2>
 );
 
@@ -60,18 +60,18 @@ export default function App() {
           className="mb-7 h-24 w-24 rounded-full object-cover"
         />
 
-        <h1 className="font-serif text-[2rem] leading-tight text-stone-900 sm:text-[2.4rem]">
+        <h1 className="font-serif text-[2rem] leading-tight text-stone-100 sm:text-[2.4rem]">
           Mahin Vishnu K B
         </h1>
 
-        <p className="mt-1 text-stone-500">
+        <p className="mt-1 text-stone-400">
           Systems and software.{" "}
-          <span className="text-amber-800/80">Halifax, Nova Scotia.</span>
+          <span className="text-amber-400/90">Halifax, Nova Scotia.</span>
         </p>
       </header>
 
       {/* Hello */}
-      <section className="mt-10 space-y-5 text-[1.0625rem] leading-[1.75] text-stone-700">
+      <section className="mt-10 space-y-5 text-[1.0625rem] leading-[1.75] text-stone-300">
         <p>
           I keep servers running and write scripts so people don&rsquo;t have to do
           dull things by hand. Mostly Linux, Python and SQL, and turning messy
@@ -95,10 +95,10 @@ export default function App() {
           {jobs.map((j) => (
             <li key={j.where}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                <h3 className="font-medium text-stone-900">{j.where}</h3>
-                <span className="text-sm text-stone-400">{j.when}</span>
+                <h3 className="font-medium text-stone-100">{j.where}</h3>
+                <span className="text-sm text-stone-500">{j.when}</span>
               </div>
-              <p className="text-[0.95rem] text-stone-600">{j.what}</p>
+              <p className="text-[0.95rem] text-stone-400">{j.what}</p>
               <p className="mt-1 text-[0.95rem] leading-[1.7] text-stone-500">
                 {j.note}
               </p>
@@ -116,11 +116,11 @@ export default function App() {
               key={degree}
               className="flex flex-wrap items-baseline justify-between gap-x-4"
             >
-              <span className="text-stone-700">
+              <span className="text-stone-300">
                 {degree}
                 <span className="text-stone-500">, {place}</span>
               </span>
-              <span className="text-sm text-stone-400">{years}</span>
+              <span className="text-sm text-stone-500">{years}</span>
             </li>
           ))}
         </ul>
@@ -144,15 +144,15 @@ export default function App() {
       </section>
 
       {/* Hello again */}
-      <footer className="mt-16 border-t border-stone-200 pt-7">
-        <p className="text-[1.0625rem] leading-[1.75] text-stone-700">
+      <footer className="mt-16 border-t border-stone-800 pt-7">
+        <p className="text-[1.0625rem] leading-[1.75] text-stone-300">
           Always happy to talk shop &mdash; servers, scripts, cameras, whatever.
         </p>
-        <p className="mt-4 text-[0.95rem] text-stone-500">
+        <p className="mt-4 text-[0.95rem] text-stone-400">
           <A href="mailto:mahinvishnukb@gmail.com">mahinvishnukb@gmail.com</A>
-          <span className="px-2 text-stone-300">·</span>
+          <span className="px-2 text-stone-700">·</span>
           <A href="https://github.com/mahinvishnukb">GitHub</A>
-          <span className="px-2 text-stone-300">·</span>
+          <span className="px-2 text-stone-700">·</span>
           <A href="https://www.linkedin.com/in/mahin-vishnu-k-b-b53b45222">LinkedIn</A>
         </p>
       </footer>

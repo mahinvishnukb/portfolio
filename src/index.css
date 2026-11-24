@@ -10,7 +10,8 @@ html {
      everywhere and stops content shifting when a scrollbar appears. */
   scrollbar-gutter: stable;
   scrollbar-width: thin;
-  scrollbar-color: #d6d3d1 transparent;
+  scrollbar-color: #44403c transparent;
+  color-scheme: dark;
 
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -18,10 +19,10 @@ html {
 
 body {
   margin: 0;
-  /* Barely-there warm tint rather than flat white — it gives the page some
-     life without turning it into a colour scheme. */
-  background: #fdfbf7;
-  color: #1c1917;
+  /* Warm near-black rather than pure #000 — pure black against white text is
+     harsh to read, and the slight warmth sits better with the amber accent. */
+  background: #14120f;
+  color: #e7e5e4;
 
   /* Inter is loaded in index.html so text measures the same on every
      platform. Without it, macOS and Windows pick different defaults
@@ -47,17 +48,19 @@ img {
 }
 
 ::selection {
-  background: #fde68a;
-  color: #1c1917;
+  background: #b45309;
+  color: #fafaf9;
 }
 
-/* Photographs warm up very slightly on hover — the only motion on the page. */
+/* Photographs sit back very slightly, then come forward on hover — the only
+   motion left on the page. Dimming them a touch stops a grid of bright images
+   overpowering the text on a dark background. */
 .photo {
-  filter: saturate(0.92);
+  filter: saturate(0.9) brightness(0.88);
   transition: filter 0.25s ease;
 }
 .photo:hover {
-  filter: saturate(1.05);
+  filter: saturate(1.02) brightness(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
