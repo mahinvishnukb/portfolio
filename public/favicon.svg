@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#050816"/>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#facc15" stroke-opacity="0.35" stroke-width="1.5"/>
-  <text x="32" y="33" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#facc15" text-anchor="middle" dominant-baseline="central" letter-spacing="-1">MV</text>
+  <rect width="64" height="64" rx="15" fill="#14120f"/>
+  <path d="M15 44V20l17 17 17-17v24"
+        fill="none" stroke="#fbbf24" stroke-width="5"
+        stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

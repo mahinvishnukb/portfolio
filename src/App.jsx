@@ -73,14 +73,14 @@ export default function App() {
       {/* Hello */}
       <section className="mt-10 space-y-5 text-[1.0625rem] leading-[1.75] text-stone-300">
         <p>
-          I keep servers running and write scripts so people don&rsquo;t have to do
-          dull things by hand. Mostly Linux, Python and SQL, and turning messy
-          operational data into something a person can actually read.
+          I build software, and the systems it runs on. Mostly Python and SQL,
+          some .NET and Angular, and a fair amount of cloud and automation work
+          along the way.
         </p>
         <p>
-          I did that full time for two years at a software company back home in
-          India before I moved here for my master&rsquo;s. I still build things
-          on my own time &mdash; most of them end up on{" "}
+          I spent two years doing that at a software company back home in India
+          before moving here for my master&rsquo;s. I still build things on my
+          own time &mdash; most of them end up on{" "}
           <A href="https://github.com/mahinvishnukb">GitHub</A>.
         </p>
         <p>
@@ -145,10 +145,7 @@ export default function App() {
 
       {/* Hello again */}
       <footer className="mt-16 border-t border-stone-800 pt-7">
-        <p className="text-[1.0625rem] leading-[1.75] text-stone-300">
-          Always happy to talk shop &mdash; servers, scripts, cameras, whatever.
-        </p>
-        <p className="mt-4 text-[0.95rem] text-stone-400">
+        <p className="text-[0.95rem] text-stone-400">
           <A href="mailto:mahinvishnukb@gmail.com">mahinvishnukb@gmail.com</A>
           <span className="px-2 text-stone-700">·</span>
           <A href="https://github.com/mahinvishnukb">GitHub</A>
